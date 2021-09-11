@@ -1,7 +1,9 @@
 import { ReactElement } from 'react';
 import Head from 'next/head';
+import Layout from '../src/components/Shared/Layout';
+import Home from '../src/components/Home';
 
-export default function Home(): ReactElement {
+export default function HomePage(): ReactElement {
   return (
     <div>
       <Head>
@@ -10,7 +12,9 @@ export default function Home(): ReactElement {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="text-gray-900 text-center">Hello World</main>
+      <Layout>
+        <Home />
+      </Layout>
     </div>
   );
 }
