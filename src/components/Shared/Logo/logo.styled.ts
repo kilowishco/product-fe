@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-export const LogoContainer = styled.a`
+export const LogoContainer = styled.div`
   svg {
-    width: 35px;
+    width: 5.5rem;
   }
 `;

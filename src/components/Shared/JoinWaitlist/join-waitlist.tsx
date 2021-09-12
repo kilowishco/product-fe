@@ -6,7 +6,7 @@ const JoinWaitlist: FC = () => {
   const [email, setEmail] = useState('');
 
   return (
-    <JoinWaitlistContainer>
+    <JoinWaitlistContainer className="join-waitlist">
       <input
         aria-label="Enter email address to join waitlist"
         value={email}

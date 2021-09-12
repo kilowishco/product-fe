@@ -19,8 +19,10 @@ const WishCardImage: WishCardImageType = {
 
 const WishCard: FC<WishCardProps> = ({ type, className }) => {
   return (
-    <WishCardContainer className={className}>
-      <Image src={WishCardImage[type]} alt={`${type}`} />
+    <WishCardContainer className={`wish-card ${className ?? ''}`}>
+      <div className="wish-card__img-wrapper">
+        <Image src={WishCardImage[type]} alt={`${type}`} width={25} height={27} />
+      </div>
       <span>{type}</span>
     </WishCardContainer>
   );

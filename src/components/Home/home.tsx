@@ -6,9 +6,7 @@ import ExternalNav from '../Shared/Nav/ExternalNav';
 import WishCard from '../Shared/WishCard';
 import JoinWaitlist from '../Shared/JoinWaitlist';
 
-import Phones from '../../assets/images/phones.svg';
-import Ellipse from '../../assets/images/ellipse.svg';
-import BlurredEllipse from '../../assets/images/blurred-ellipse.svg';
+import Phones from '../../assets/images/phones.jpg';
 import Scribble from '../../assets/images/scribble.svg';
 
 import { HomeWrapper, HomeImageScroller, HomeContentWrapper } from './home.styled';
@@ -20,21 +18,17 @@ const Home: FC = () => {
       <HomeWrapper>
         <HomeImageScroller>
           <WishCard type="Birthdays" />
-          <Image
-            className="home__phone-img"
-            src={Phones}
-            aria-hidden
-            alt="two iphones"
-            width={232}
-            height={585}
-          />
-          <Image className="home__img--ellipse" src={Ellipse} alt="ellipse" aria-hidden />
-          <Image
-            className="home__img--ellipse-blurred"
-            src={BlurredEllipse}
-            alt="blurred ellipse"
-            aria-hidden
-          />
+          <div className="home__phone-img-wrapper">
+            <Image
+              className="home__phone-img"
+              src={Phones}
+              aria-hidden
+              alt="two iphones"
+              width={482}
+              height={447}
+              layout="intrinsic"
+            />
+          </div>
           <div className="home__img--control">
             <button type="button">
               <svg
@@ -54,15 +48,14 @@ const Home: FC = () => {
           </div>
         </HomeImageScroller>
         <HomeContentWrapper>
-          <span>Your big day is coming</span>
-          <h1>Are you ready to make a wish</h1>
+          <span>Make a Thousand Wishes</span>
+          <h1>Get the gift you deserve</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptates facilis
-            delectus magni at, dignissimos error nihil unde in similique totam quidem aliquam
-            perspiciatis sed consectetur perferendis. Quod, laudantium modi!
+            Create your dream wishlist. Help your friends and family make the right gifting decision
+            for you, you just have to ask.
           </p>
-          <Image src={Scribble} alt="scribble" aria-hidden width={161} height={59} />
           <JoinWaitlist />
+          <Image src={Scribble} alt="scribble" aria-hidden width={161} height={59} />
         </HomeContentWrapper>
       </HomeWrapper>
     </ErrorBoundary>
