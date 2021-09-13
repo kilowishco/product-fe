@@ -1,3 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@font-face {
+  font-family: 'ProjektBlackbird';
+  src: local('ProjektBlackbird'), url(../src/assets/fonts/projekt-blackbird.otf) format('opentype');
+  font-display: swap;
+  font-weight: 400;
+}
