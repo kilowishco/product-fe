@@ -1,1 +1,1 @@
-web: next start -p 8000
+web: next start
