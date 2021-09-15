@@ -48,11 +48,11 @@ const Home: FC = () => {
           </div>
         </HomeImageScroller>
         <HomeContentWrapper>
-          <span>Make a Thousand Wishes</span>
-          <h1>Get the gift you deserve</h1>
+          <span>Make a Thousand Wishes come true</span>
+          <h1>Get the gifts you desire on your special day</h1>
           <p>
-            Create your dream wishlist. Help your friends and family make the right gifting decision
-            for you, you just have to ask.
+            Help your friends and family make the right gifting decision for you. Create a wishlist
+            for birthdays, weddings, graduation, holidays, festive periods, and so much more.
           </p>
           <JoinWaitlist />
           <Image src={Scribble} alt="scribble" aria-hidden width={161} height={59} />
