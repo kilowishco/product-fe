@@ -1,16 +1,9 @@
-import { FC, ReactNode } from 'react';
+import { FC } from 'react';
 import { ButtonContainer } from './button.styled';
+import { ButtonProps } from '../../../types';
 
 type ButtonTheme = {
   [key: string]: string;
-};
-
-type ButtonProps = {
-  size: string;
-  text: string | ReactNode;
-  className?: string;
-  type?: 'submit' | 'reset' | 'button';
-  onClick?: () => void;
 };
 
 const dimension: ButtonTheme = {
@@ -18,12 +11,13 @@ const dimension: ButtonTheme = {
   lg: 'button-lg',
 };
 
-const BaseButton: FC<ButtonProps> = ({ size, text, className, onClick, type }) => {
+const BaseButton: FC<ButtonProps> = ({ size, text, className, onClick, type, disabled }) => {
   return (
     <ButtonContainer
-      className={`${dimension[size]} ${className}`}
+      className={`${dimension[size]} ${className} ${disabled ? 'disabled' : ''}`}
       type={type === 'submit' ? 'submit' : 'button'}
-      onClick={onClick}>
+      onClick={onClick}
+      aria-disabled={disabled}>
       {text}
     </ButtonContainer>
   );

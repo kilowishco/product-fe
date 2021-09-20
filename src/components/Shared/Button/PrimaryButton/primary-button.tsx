@@ -1,15 +1,8 @@
-import { FC, ReactNode } from 'react';
+import { FC } from 'react';
 import { PrimaryButtonContainer } from './primary-button.styled';
+import { ButtonProps } from '../../../../types';
 
-type ButtonProps = {
-  size: string;
-  text: string | ReactNode;
-  className?: string;
-  type?: 'submit' | 'reset' | 'button';
-  onClick?: () => void;
-};
-
-const PrimaryButton: FC<ButtonProps> = ({ size, text, className, onClick, type }) => {
+const PrimaryButton: FC<ButtonProps> = ({ size, text, className, onClick, type, disabled }) => {
   return (
     <PrimaryButtonContainer
       size={size}
@@ -17,6 +10,7 @@ const PrimaryButton: FC<ButtonProps> = ({ size, text, className, onClick, type }
       text={text}
       onClick={onClick}
       type={type}
+      disabled={disabled}
     />
   );
 };
