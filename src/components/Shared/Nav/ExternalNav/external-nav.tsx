@@ -9,10 +9,15 @@ type ExternalNavProps = {
 };
 
 const ExternalNav: FC<ExternalNavProps> = () => {
+  const focusOnWaitlist = () => {
+    const joinWaitlistInput: HTMLInputElement = document.querySelector('.join-waitlist input');
+    joinWaitlistInput?.focus();
+  };
+
   return (
     <ExternalNavContainer>
       <Logo />
-      <PrimaryButton size="sm" text="Get Early Access" />
+      <PrimaryButton size="sm" text="Get Early Access" onClick={focusOnWaitlist} />
     </ExternalNavContainer>
   );
 };

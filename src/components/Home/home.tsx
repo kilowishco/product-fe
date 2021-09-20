@@ -16,6 +16,16 @@ const Home: FC = () => {
     <ErrorBoundary link="/">
       <ExternalNav />
       <HomeWrapper>
+        <HomeContentWrapper>
+          <span>Make a Thousand Wishes come true</span>
+          <h1>Get the gifts you desire on your special day</h1>
+          <p>
+            Help your friends and family make the right gifting decision for you. Create a wishlist
+            for birthdays, weddings, graduation, holidays, festive periods, and so much more.
+          </p>
+          <JoinWaitlist />
+          <Image src={Scribble} alt="scribble" aria-hidden width={161} height={59} />
+        </HomeContentWrapper>
         <HomeImageScroller>
           <WishCard type="Birthdays" />
           <div className="home__phone-img-wrapper">
@@ -29,7 +39,7 @@ const Home: FC = () => {
               layout="intrinsic"
             />
           </div>
-          <div className="home__img--control">
+          {/* <div className="home__img--control">
             <button type="button">
               <svg
                 width="12"
@@ -45,18 +55,8 @@ const Home: FC = () => {
               </svg>
               <span>Scroll down</span>
             </button>
-          </div>
+          </div> */}
         </HomeImageScroller>
-        <HomeContentWrapper>
-          <span>Make a Thousand Wishes come true</span>
-          <h1>Get the gifts you desire on your special day</h1>
-          <p>
-            Help your friends and family make the right gifting decision for you. Create a wishlist
-            for birthdays, weddings, graduation, holidays, festive periods, and so much more.
-          </p>
-          <JoinWaitlist />
-          <Image src={Scribble} alt="scribble" aria-hidden width={161} height={59} />
-        </HomeContentWrapper>
       </HomeWrapper>
     </ErrorBoundary>
   );

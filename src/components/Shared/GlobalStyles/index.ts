@@ -13,6 +13,7 @@ const GlobalStyles = createGlobalStyle`
     --color-purple-main: #0E0E41;
     --color-grey: #7D7A80;
     --color-mid-grey: #696871;
+    --color-red: #ff4343;
 
     font-size: 16px;
 
@@ -38,6 +39,24 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  }
+
+  .sr-only {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+}
+
+  .--center {
+    text-align: center;
   }
 `;
 
