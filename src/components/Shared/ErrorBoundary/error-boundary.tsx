@@ -1,4 +1,5 @@
 import { Component, ReactNode, ErrorInfo } from 'react';
+import Link from 'next/link';
 
 type ErrorBoundaryProps = {
   link: string;
@@ -24,13 +25,16 @@ export default class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBo
   }
 
   public render(): ReactNode {
-    const { children } = this.props;
+    const { children, link } = this.props;
     const { hasError } = this.state;
 
     if (hasError) {
       return (
         <div>
-          <p>Something went wrong</p>
+          <p>{`Something went wrong `}</p>
+          <Link href={link}>
+            <a style={{ textDecoration: 'underline' }}>Go back home</a>
+          </Link>
         </div>
       );
     }

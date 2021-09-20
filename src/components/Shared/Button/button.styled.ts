@@ -13,6 +13,10 @@ export const ButtonContainer = styled.button`
     transform: scale(1.015);
   }
 
+  &.disabled {
+    opacity: 0.5;
+  }
+
   &.button-sm {
     height: 2.125rem;
     font-size: 0.75rem;

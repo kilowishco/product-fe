@@ -20,7 +20,7 @@ To run the local server,
 
 The `prettier`, and `eslint` libraries are used for formating and error checking. Install their corresponding vscode extensions to use with VSCode.
 
-Using the `.sample-env` as a reference, create a local `env` file with the official Sanity SPACE ID nd ACCESS TOKEN.
+Using the `.sample-env` as a reference, create a local `.env.local` file with the appropriate variables.
 
 ### Production
 
