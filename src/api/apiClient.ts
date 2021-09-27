@@ -6,7 +6,7 @@ export default class APIClient {
 
   constructor(baseURL?: string) {
     this.instance = axios.create({
-      baseURL: baseURL || process.env.NEXT_PUBLIC_API_BASE_URL,
+      baseURL: baseURL || 'https://kilowish-be.herokuapp.com',
       timeout: 60000,
       headers: {
         Accept: 'application/json',
