@@ -1,5 +1,5 @@
 //==============================================================================
-// Add To Waitlist
+// General Waitlist
 //==============================================================================
 
 export type WaitlistPayload = {
@@ -13,4 +13,13 @@ export type WaitlistPayload = {
 export type WaitlistVerifyPayload = {
   email: string;
   code: string;
+};
+
+//==============================================================================
+// Waitlist Verify Page
+//==============================================================================
+
+export type WaitlistVerifyProps = {
+  email?: string;
+  verified: boolean;
 };
