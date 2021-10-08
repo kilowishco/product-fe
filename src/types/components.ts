@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, Ref } from 'react';
 
 //==============================================================================
 // Button
@@ -11,4 +11,5 @@ export type ButtonProps = {
   disabled?: boolean;
   type?: 'submit' | 'reset' | 'button';
   onClick?: () => void;
+  buttonRef?: Ref<HTMLButtonElement>;
 };

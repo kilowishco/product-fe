@@ -24,8 +24,17 @@ export default class APIClient {
   }
 
   async addToWaitlist(payload: WaitlistPayload): Promise<AxiosResponse> {
-    console.log(this.instance);
     const response = await this.instance.post('/api/v1/waitlist', payload);
+    return response.data;
+  }
+
+  async checkWaitlist(payload: WaitlistPayload): Promise<AxiosResponse> {
+    const response = await this.instance.post('/api/v1/waitlist/check', payload);
+    return response.data;
+  }
+
+  async resendWaitlistCode(payload: WaitlistPayload): Promise<AxiosResponse> {
+    const response = await this.instance.post('/api/v1/waitlist/resend', payload);
     return response.data;
   }
 
