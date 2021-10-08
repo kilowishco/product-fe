@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { forwardRef } from 'react';
 import { ButtonContainer } from './button.styled';
 import { ButtonProps } from '../../../types';
 
@@ -11,16 +11,19 @@ const dimension: ButtonTheme = {
   lg: 'button-lg',
 };
 
-const BaseButton: FC<ButtonProps> = ({ size, text, className, onClick, type, disabled }) => {
-  return (
-    <ButtonContainer
-      className={`${dimension[size]} ${className} ${disabled ? 'disabled' : ''}`}
-      type={type === 'submit' ? 'submit' : 'button'}
-      onClick={onClick}
-      aria-disabled={disabled}>
-      {text}
-    </ButtonContainer>
-  );
-};
+const BaseButton = forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ size, text, className, onClick, type, disabled }, ref) => {
+    return (
+      <ButtonContainer
+        className={`${dimension[size]} ${className} ${disabled ? 'disabled' : ''}`}
+        type={type === 'submit' ? 'submit' : 'button'}
+        onClick={onClick}
+        ref={ref}
+        aria-disabled={disabled}>
+        {text}
+      </ButtonContainer>
+    );
+  }
+);
 
 export default BaseButton;
