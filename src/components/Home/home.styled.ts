@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 
 export const HomeWrapper = styled.section`
-  min-height: 100vh;
   display: flex;
   align-items: flex-end;
   flex-direction: column-reverse;
-  padding: 7.5rem 0 2.5rem;
+  padding: 9.5rem 0 4.5rem;
   background-color: var(--color-lighter-yellow);
 
   > article {
@@ -13,12 +12,14 @@ export const HomeWrapper = styled.section`
   }
 
   @media (min-width: 400px) {
-    padding: 9.5rem 0 2.5rem;
+    padding: 13rem 0 2.5rem;
     align-items: center;
   }
 
   @media (min-width: 768px) {
+    padding: 9.5rem 0 2.5rem;
     flex-direction: row;
+    min-height: 100vh;
   }
 `;
 
