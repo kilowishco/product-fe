@@ -10,7 +10,7 @@ export const WishCardContainer = styled.div`
   border-radius: 0.25rem;
   width: fit-content;
 
-  span {
+  > span {
     flex-grow: 1;
     display: inline-block;
     margin: 0 2rem;
@@ -29,7 +29,7 @@ export const WishCardContainer = styled.div`
   }
 
   @media (min-width: 768px) {
-    span {
+    > span {
       margin: 0 2.5rem;
       font-weight: 600;
       font-size: 1.125rem;

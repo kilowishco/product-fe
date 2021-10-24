@@ -53,7 +53,7 @@ export const JoinWaitlistContainer = styled.div`
     }
   }
 
-  @media (min-width: 400px) {
+  @media (min-width: 400px) and (max-width: 768px) {
     > div {
       flex-direction: row;
     }
@@ -78,7 +78,26 @@ export const JoinWaitlistContainer = styled.div`
     input {
       font-size: 1rem;
       line-height: 1.125rem;
-      padding: 0 1.5rem;
+    }
+  }
+
+  @media (min-width: 1020px) {
+    > div {
+      flex-direction: row;
+    }
+
+    input {
+      border-radius: 3px 0 0 3px;
+      border-right: none;
+      flex-grow: 1;
+      margin-bottom: 0;
+      width: auto;
+    }
+
+    button {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      width: auto;
     }
   }
 `;
