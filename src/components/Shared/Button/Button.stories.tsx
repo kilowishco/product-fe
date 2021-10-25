@@ -36,6 +36,6 @@ const PrimaryButtonTemplate = (args) => (
 export const Primary = PrimaryButtonTemplate.bind({});
 
 Primary.args = {
-  text: 'Click me',
+  text: 'Button',
   size: 'sm',
 };
