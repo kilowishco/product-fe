@@ -14,6 +14,7 @@
 
 # storybook
 /src/stories/
+build-storybook.log
 
 # production
 /build

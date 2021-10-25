@@ -16,11 +16,11 @@ This project was bootstrapped with [`create-next-app`](https://github.com/vercel
 
 To run the local server,
 
-    yarn start
+    yarn dev
 
 The `prettier`, and `eslint` libraries are used for formating and error checking. Install their corresponding vscode extensions to use with VSCode.
 
-Using the `.sample-env` as a reference, create a local `.env.local` file with the appropriate variables.
+Using the `.env.example` as a reference, create a local `.env.local` file with the appropriate variables.
 
 ### Production
 
@@ -31,3 +31,15 @@ To generate build files for production,
 ### Test
 
 Coming Soon
+
+### Storybook
+
+To view stories locally,
+
+    yarn storybook
+
+### Deploy Storybook
+
+To deploy build files,
+
+    yarn chromatic
