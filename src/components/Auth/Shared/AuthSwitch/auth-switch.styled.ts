@@ -9,10 +9,9 @@ export const AuthSwitchContainer = styled.p`
 `;
 
 export const AuthSwitchButton = styled.button`
-  text-transform: uppercase;
   background-color: transparent;
   cursor: pointer;
-  color: var(--color-grey-dark);
+  color: var(--color-purple-secondary);
   padding: 0;
   font-weight: 500;
   border: none;
@@ -20,6 +19,6 @@ export const AuthSwitchButton = styled.button`
   line-height: 1.5rem;
 
   &:hover {
-    color: var(--color-secondary);
+    text-decoration: underline;
   }
 `;

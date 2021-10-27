@@ -15,7 +15,7 @@ const AuthSwitch: FC<AuthSwitchProps> = ({ loginState }) => {
           {`Don't have an account? `}
           <Link href="/signup">
             <a>
-              <AuthSwitchButton>SIGN UP</AuthSwitchButton>
+              <AuthSwitchButton>Sign Up</AuthSwitchButton>
             </a>
           </Link>
         </>
@@ -24,7 +24,7 @@ const AuthSwitch: FC<AuthSwitchProps> = ({ loginState }) => {
           {`Already have an account? `}
           <Link href="/">
             <a>
-              <AuthSwitchButton>SIGN IN</AuthSwitchButton>
+              <AuthSwitchButton>Sign In</AuthSwitchButton>
             </a>
           </Link>
         </>

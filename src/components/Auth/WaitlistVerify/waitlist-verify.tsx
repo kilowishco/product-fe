@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 
 import AuthWrapper from '../auth';
 import PrimaryButton from '../../Shared/Button/PrimaryButton';
+import ErrorBoundary from '../../Shared/ErrorBoundary';
 import { WaitlistVerifyContainer, ResendCodeWrapper } from './waitlist-verify.styled';
 
 import APIClient from '../../../api/apiClient';
@@ -167,23 +168,25 @@ const WaitlistVerify: FC<WaitlistVerifyProps> = ({ email, verified }) => {
   };
 
   return (
-    <AuthWrapper isAuthSwitchHidden>
-      <WaitlistVerifyContainer className="join-waitlist --center join-waitlist__confirmation-modal">
-        {WaitlistConfirmationInput()}
-      </WaitlistVerifyContainer>
-      <ResendCodeWrapper>
-        <p>
-          {`Didn't receive an email? `}
-          {countdownValue ? (
-            <span>{countdownValue}</span>
-          ) : (
-            <button onClick={resendWaitlistCode}>
-              <span>Click to resend</span>
-            </button>
-          )}
-        </p>
-      </ResendCodeWrapper>
-    </AuthWrapper>
+    <ErrorBoundary link="/">
+      <AuthWrapper isAuthSwitchHidden>
+        <WaitlistVerifyContainer className="join-waitlist --center join-waitlist__confirmation-modal">
+          {WaitlistConfirmationInput()}
+        </WaitlistVerifyContainer>
+        <ResendCodeWrapper>
+          <p>
+            {`Didn't receive an email? `}
+            {countdownValue ? (
+              <span>{countdownValue}</span>
+            ) : (
+              <button onClick={resendWaitlistCode}>
+                <span>Click to resend</span>
+              </button>
+            )}
+          </p>
+        </ResendCodeWrapper>
+      </AuthWrapper>
+    </ErrorBoundary>
   );
 };
 

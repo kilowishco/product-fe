@@ -11,6 +11,7 @@ const GlobalStyles = createGlobalStyle`
     --color-orange: #EE6F56;
     --color-black: #020209;
     --color-purple-main: #0E0E41;
+    --color-purple-secondary: #7575FE;
     --color-blue: #7576fe;
     --color-grey: #7D7A80;
     --color-mid-grey: #696871;

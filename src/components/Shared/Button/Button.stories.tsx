@@ -3,6 +3,7 @@ import { action } from '@storybook/addon-actions';
 
 import Button from './base';
 import PrimaryButton from './PrimaryButton';
+import SecondaryButton from './SecondaryButton';
 
 export default {
   component: Button,
@@ -36,6 +37,17 @@ const PrimaryButtonTemplate = (args) => (
 export const Primary = PrimaryButtonTemplate.bind({});
 
 Primary.args = {
+  text: 'Button',
+  size: 'sm',
+};
+
+const SecondaryButtonTemplate = (args) => (
+  <SecondaryButton onClick={action('onClickAction')} {...args} />
+);
+
+export const Secondary = SecondaryButtonTemplate.bind({});
+
+Secondary.args = {
   text: 'Button',
   size: 'sm',
 };
