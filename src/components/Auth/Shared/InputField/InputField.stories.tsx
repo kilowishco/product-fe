@@ -16,7 +16,8 @@ export default {
     },
     type: {
       description: 'Input element type',
-      control: 'text',
+      options: ['text', 'email', 'password'],
+      control: 'radio',
     },
     value: {
       description: 'Value of input field',

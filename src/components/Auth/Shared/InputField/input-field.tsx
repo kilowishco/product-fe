@@ -27,7 +27,7 @@ const InputField: FC<InputFieldProps> = ({
 
   return (
     <>
-      <InputLabel htmlFor={name}>{(value || typeof value === 'number') && label}</InputLabel>
+      {label && <InputLabel htmlFor={name}>{label}</InputLabel>}
 
       <InputWrapper>
         <input

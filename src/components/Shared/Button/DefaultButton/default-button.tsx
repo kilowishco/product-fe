@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import { SecondaryButtonContainer } from './secondary-button.styled';
+import { DefaultButtonContainer } from './default-button.styled';
 import { ButtonProps } from '../../../../types';
 
-const SecondaryButton: FC<ButtonProps> = ({
+const DefaultButton: FC<ButtonProps> = ({
   size,
   text,
   className,
@@ -12,7 +12,7 @@ const SecondaryButton: FC<ButtonProps> = ({
   buttonRef,
 }) => {
   return (
-    <SecondaryButtonContainer
+    <DefaultButtonContainer
       size={size}
       className={className}
       text={text}
@@ -24,4 +24,4 @@ const SecondaryButton: FC<ButtonProps> = ({
   );
 };
 
-export default SecondaryButton;
+export default DefaultButton;

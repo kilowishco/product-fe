@@ -17,6 +17,9 @@ const GlobalStyles = createGlobalStyle`
     --color-mid-grey: #696871;
     --color-light-grey: #C6CBD2;
     --color-red: #ff4343;
+    --color-light-blue: #E9E9FF;
+    --color-input-black: #2E353C;
+    --color-placeholder-grey: #DDE0E5;
 
     font-size: 16px;
 

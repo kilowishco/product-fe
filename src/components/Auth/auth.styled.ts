@@ -40,6 +40,7 @@ export const AuthLeft = styled.div`
     color: white;
     margin: auto;
     letter-spacing: -1px;
+    font-family: 'DM Sans', Inter, Helvetica, Arial, Verdana, Tahoma, sans-serif;
   }
 
   .orange {

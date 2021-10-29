@@ -4,6 +4,7 @@ import { action } from '@storybook/addon-actions';
 import Button from './base';
 import PrimaryButton from './PrimaryButton';
 import SecondaryButton from './SecondaryButton';
+import DefaultButton from './DefaultButton';
 
 export default {
   component: Button,
@@ -49,5 +50,16 @@ export const Secondary = SecondaryButtonTemplate.bind({});
 
 Secondary.args = {
   text: 'Button',
+  size: 'sm',
+};
+
+const DefaultButtonTemplate = (args) => (
+  <DefaultButton onClick={action('onClickAction')} {...args} />
+);
+
+export const Default = DefaultButtonTemplate.bind({});
+
+Default.args = {
+  text: 'Sign up',
   size: 'sm',
 };

@@ -57,42 +57,40 @@ const LoginForm: FC = () => {
             )}
           </p>
 
-          <article>
-            <InputContainer>
-              <InputField
-                label="Email address"
-                placeholder="Email"
-                name="email"
-                type="email"
-                value={values.email}
-                setValue={handleChange}
-                error={errorCheck('email', values.email, errors.email)}
-              />
-            </InputContainer>
-
-            <InputContainer>
-              <InputField
-                label="Password"
-                placeholder="Password"
-                name="password"
-                type="password"
-                value={values.password}
-                setValue={handleChange}
-                error={errorCheck('password', values.password, errors.password)}
-              />
-            </InputContainer>
-
-            <SecondaryButton
-              className="login-button"
-              text={!isLoggingIn ? 'Sign In' : <Loader light />}
-              size="lg"
-              type="submit"
+          <InputContainer>
+            <InputField
+              label="Email address"
+              placeholder="Enter email address"
+              name="email"
+              type="email"
+              value={values.email}
+              setValue={handleChange}
+              error={errorCheck('email', values.email, errors.email)}
             />
+          </InputContainer>
 
-            {/* <div className="auth-switch-container">
+          <InputContainer>
+            <InputField
+              label="Password"
+              placeholder="Enter 8 characters or more"
+              name="password"
+              type="password"
+              value={values.password}
+              setValue={handleChange}
+              error={errorCheck('password', values.password, errors.password)}
+            />
+          </InputContainer>
+
+          <SecondaryButton
+            className="login-button"
+            text={!isLoggingIn ? 'Sign In' : <Loader light />}
+            size="lg"
+            type="submit"
+          />
+
+          {/* <div className="auth-switch-container">
               TODO: Forgotten Password
             </div> */}
-          </article>
         </FormContainer>
       )}
     </Formik>

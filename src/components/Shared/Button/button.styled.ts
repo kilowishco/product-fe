@@ -7,6 +7,7 @@ export const ButtonContainer = styled.button`
   letter-spacing: 0.1px;
   display: flex;
   align-items: center;
+  justify-content: center;
   transition: transform ease-in 200ms;
 
   &:hover {

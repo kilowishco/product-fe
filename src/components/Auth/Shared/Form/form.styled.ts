@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const FormContainer = styled.form`
   max-width: 480px;
   width: 100%;
+  margin: 0 auto;
 
   > h2,
   > p {
@@ -10,45 +11,57 @@ export const FormContainer = styled.form`
   }
 
   h2 {
-    font-weight: 400;
-    font-size: 1.375rem;
-    line-height: 3rem;
-    margin-bottom: 0;
     text-align: center;
+    color: var(--color-purple);
+    font-family: 'DM Sans', Inter, Helvetica, Arial, Verdana, Tahoma, sans-serif;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    font-size: 1.75rem;
+    line-height: 1.8rem;
+    letter-spacing: -0.025em;
   }
 
   > p {
     font-size: 0.875rem;
     line-height: 1.5rem;
-    color: var(--color-grey-dark);
+    color: var(--color-dark);
     margin-bottom: 0;
     text-align: center;
   }
 
-  > article {
-    margin-top: 2.5rem;
-  }
-
-  button {
-    margin-top: 2.5rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .auth-switch-container > p {
-    margin-top: 1.5rem;
-    display: block;
+  > button {
+    margin-top: 3.125rem;
     text-align: center;
+    width: 100%;
   }
 
-  .auth-switch-container button {
-    margin-top: 0;
+  .social_login--buttons {
+    margin-top: 1.25rem;
+
+    > div {
+      display: block;
+    }
+
+    > div > * + * {
+      margin-top: 1.25rem;
+      margin-left: 0;
+    }
+
+    button {
+      font-size: 0.875rem;
+      width: 100%;
+    }
+
+    svg {
+      width: 1.25rem;
+      margin-right: 1.25rem;
+    }
   }
 
   @media (min-width: 768px) {
     h2 {
-      font-size: 1.75rem;
-      margin-bottom: 0.375rem;
+      font-size: 2.25rem;
+      line-height: 2.5rem;
       text-align: left;
     }
 
@@ -58,18 +71,25 @@ export const FormContainer = styled.form`
       text-align: left;
     }
 
-    button {
-      margin: 4rem 0 0;
-    }
+    .social_login--buttons > div {
+      display: flex;
 
-    .auth-switch-container {
-      display: none;
+      button {
+        width: auto;
+      }
+
+      > * + * {
+        margin-top: initial;
+        margin-left: 0.75rem;
+      }
     }
   }
 `;
 
 export const InputContainer = styled.div`
-  padding: 1rem 0 0;
+  + div {
+    margin-top: 1.25rem;
+  }
 `;
 
 export const FormError = styled.p`
@@ -77,9 +97,3 @@ export const FormError = styled.p`
   line-height: 1.5rem;
   color: var(--color-red);
 `;
-
-export default {
-  FormContainer,
-  InputContainer,
-  FormError,
-};
