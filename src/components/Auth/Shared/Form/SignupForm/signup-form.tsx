@@ -3,7 +3,6 @@
 import { FC } from 'react';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import Image from 'next/image';
 
 import InputField from '../../InputField';
 import Loader from '../../Loader';

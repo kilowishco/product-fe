@@ -9,7 +9,12 @@ type LoaderProps = {
 const Loader: FC<LoaderProps> = ({ light }) => {
   return (
     <LoaderContainer className={`${light ? 'light' : ''}`}>
-      <svg width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        width="63"
+        height="63"
+        viewBox="0 0 63 63"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg">
         <path
           fillRule="evenodd"
           clipRule="evenodd"

@@ -16,7 +16,7 @@ export const LoaderContainer = styled.span`
   }
 
   path {
-    fill: var(--color-secondary-light);
+    fill: var(--color-blue);
   }
 
   &.light path {

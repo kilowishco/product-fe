@@ -12,13 +12,14 @@ const dimension: ButtonTheme = {
 };
 
 const BaseButton = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ size, text, className, onClick, type, disabled }, ref) => {
+  ({ size, text, className, onClick, type, disabled, style }, ref) => {
     return (
       <ButtonContainer
         className={`${dimension[size]} ${className} ${disabled ? 'disabled' : ''}`}
         type={type === 'submit' ? 'submit' : 'button'}
         onClick={onClick}
         ref={ref}
+        style={style}
         aria-disabled={disabled}>
         {text}
       </ButtonContainer>

@@ -7,6 +7,7 @@ import * as Yup from 'yup';
 import InputField from '../../InputField';
 import Loader from '../../Loader';
 import SecondaryButton from '../../../../Shared/Button/SecondaryButton';
+import BareButton from '../../../../Shared/Button/BareButton';
 
 import { FormContainer, InputContainer, FormError } from '../form.styled';
 
@@ -88,9 +89,7 @@ const LoginForm: FC = () => {
             type="submit"
           />
 
-          {/* <div className="auth-switch-container">
-              TODO: Forgotten Password
-            </div> */}
+          <BareButton text="Forgotten Password?" size="lg" className="fp-button" />
         </FormContainer>
       )}
     </Formik>

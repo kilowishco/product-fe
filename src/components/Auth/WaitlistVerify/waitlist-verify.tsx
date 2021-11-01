@@ -173,18 +173,20 @@ const WaitlistVerify: FC<WaitlistVerifyProps> = ({ email, verified }) => {
         <WaitlistVerifyContainer className="join-waitlist --center join-waitlist__confirmation-modal">
           {WaitlistConfirmationInput()}
         </WaitlistVerifyContainer>
-        <ResendCodeWrapper>
-          <p>
-            {`Didn't receive an email? `}
-            {countdownValue ? (
-              <span>{countdownValue}</span>
-            ) : (
-              <button onClick={resendWaitlistCode}>
-                <span>Click to resend</span>
-              </button>
-            )}
-          </p>
-        </ResendCodeWrapper>
+        {!emailInfo.verified && (
+          <ResendCodeWrapper>
+            <p>
+              {`Didn't receive an email? `}
+              {countdownValue ? (
+                <span>{countdownValue}</span>
+              ) : (
+                <button onClick={resendWaitlistCode}>
+                  <span>Click to resend</span>
+                </button>
+              )}
+            </p>
+          </ResendCodeWrapper>
+        )}
       </AuthWrapper>
     </ErrorBoundary>
   );

@@ -15,5 +15,9 @@ export const AuthNavContainer = styled(BaseNav)`
     .auth-switch {
       display: block;
     }
+
+    svg path {
+      fill: white;
+    }
   }
 `;

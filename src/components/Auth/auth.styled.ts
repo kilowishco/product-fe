@@ -6,10 +6,6 @@ export const AuthContainer = styled.main`
   @media (min-width: 768px) {
     display: grid;
     grid-template-columns: 1fr 2fr;
-
-    svg path {
-      fill: white;
-    }
   }
 `;
 
@@ -36,10 +32,11 @@ export const AuthLeft = styled.div`
 
   p {
     font-size: 2rem;
-    line-height: 3rem;
+    font-weight: 500;
+    line-height: 2.5rem;
     color: white;
     margin: auto;
-    letter-spacing: -1px;
+    letter-spacing: -1.5px;
     font-family: 'DM Sans', Inter, Helvetica, Arial, Verdana, Tahoma, sans-serif;
   }
 

@@ -4,7 +4,7 @@ import SignupForm from '../Shared/Form/SignupForm';
 import ErrorBoundary from '../../Shared/ErrorBoundary';
 import AuthWrapper from '../auth';
 
-const Login: FC = () => {
+const Signup: FC = () => {
   return (
     <ErrorBoundary link="/">
       <AuthWrapper loginState>
@@ -14,4 +14,4 @@ const Login: FC = () => {
   );
 };
 
-export default Login;
+export default Signup;

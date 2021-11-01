@@ -58,6 +58,11 @@ export const FormContainer = styled.form`
     }
   }
 
+  .fp-button {
+    margin: 1.25rem auto 0;
+    width: auto;
+  }
+
   @media (min-width: 768px) {
     h2 {
       font-size: 2.25rem;
@@ -76,11 +81,11 @@ export const FormContainer = styled.form`
 
       button {
         width: auto;
+        min-width: 16rem;
       }
 
       > * + * {
         margin-top: initial;
-        margin-left: 0.75rem;
       }
     }
   }

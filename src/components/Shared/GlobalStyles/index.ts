@@ -12,11 +12,11 @@ const GlobalStyles = createGlobalStyle`
     --color-black: #020209;
     --color-purple-main: #0E0E41;
     --color-purple-secondary: #7575FE;
-    --color-blue: #7576fe;
+    --color-blue: #7576FE;
     --color-grey: #7D7A80;
     --color-mid-grey: #696871;
     --color-light-grey: #C6CBD2;
-    --color-red: #ff4343;
+    --color-red: #FF4343;
     --color-light-blue: #E9E9FF;
     --color-input-black: #2E353C;
     --color-placeholder-grey: #DDE0E5;

@@ -24,7 +24,15 @@ const Home: FC = () => {
             for birthdays, weddings, graduation, holidays, festive periods, and so much more.
           </p>
           <JoinWaitlist />
-          <Image src={Scribble} alt="scribble" aria-hidden width={161} height={59} />
+          <Image
+            src={Scribble}
+            alt="scribble"
+            aria-hidden
+            width={161}
+            height={59}
+            layout="intrinsic"
+            priority
+          />
         </HomeContentWrapper>
         <HomeImageScroller>
           <WishCard type="Birthdays" />
@@ -37,6 +45,7 @@ const Home: FC = () => {
               width={482}
               height={447}
               layout="intrinsic"
+              priority
             />
           </div>
           {/* <div className="home__img--control">

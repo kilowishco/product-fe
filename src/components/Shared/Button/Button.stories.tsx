@@ -5,6 +5,7 @@ import Button from './base';
 import PrimaryButton from './PrimaryButton';
 import SecondaryButton from './SecondaryButton';
 import DefaultButton from './DefaultButton';
+import BareButton from './BareButton';
 
 export default {
   component: Button,
@@ -18,6 +19,10 @@ export default {
       description: 'Size of the button',
       options: ['sm', 'lg'],
       control: 'radio',
+    },
+    color: {
+      description: 'Color of the bare button',
+      control: 'color',
     },
   },
 } as Meta;
@@ -62,4 +67,14 @@ export const Default = DefaultButtonTemplate.bind({});
 Default.args = {
   text: 'Sign up',
   size: 'sm',
+};
+
+const BareButtonTemplate = (args) => <BareButton onClick={action('onClickAction')} {...args} />;
+
+export const Bare = BareButtonTemplate.bind({});
+
+Bare.args = {
+  text: 'Sign up',
+  size: 'sm',
+  color: 'red',
 };
