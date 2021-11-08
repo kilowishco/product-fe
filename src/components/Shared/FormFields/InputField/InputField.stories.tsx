@@ -4,7 +4,7 @@ import InputField from './input-field';
 
 export default {
   component: InputField,
-  title: 'Components/Input',
+  title: 'Components/FormFields/Input',
   argTypes: {
     label: {
       description: 'Description of input field',
@@ -15,8 +15,8 @@ export default {
       control: 'text',
     },
     type: {
-      description: 'Input element type',
-      options: ['text', 'email', 'password'],
+      description: 'Input field type',
+      options: ['text', 'email', 'numeric', 'number'],
       control: 'radio',
     },
     value: {
@@ -24,12 +24,16 @@ export default {
       control: 'text',
     },
     error: {
-      description: 'Is input in error state or not',
+      description: 'Is input field in error state or not',
       control: 'boolean',
     },
     errorMessage: {
-      description: 'Error message if input is in error state',
+      description: 'Error message if input field is in error state',
       control: 'text',
+    },
+    full: {
+      description: 'Does input field span the full width of its container or not',
+      control: 'boolean',
     },
   },
 } as Meta;
@@ -46,5 +50,5 @@ Base.args = {
   value: '',
   error: false,
   errorMessage: '',
-  setValue: () => null,
+  full: false,
 };

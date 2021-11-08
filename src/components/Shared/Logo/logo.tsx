@@ -4,7 +4,7 @@ import { LogoContainer } from './logo.styled';
 
 const Logo: FC = () => {
   return (
-    <LogoContainer>
+    <LogoContainer className="logo">
       <Link href="/">
         <a>
           <svg

@@ -4,7 +4,8 @@ import { FC } from 'react';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
-import InputField from '../../InputField';
+import InputField from '../../../../Shared/FormFields/InputField';
+import PasswordField from '../../../../Shared/FormFields/InputField/Password';
 import Loader from '../../Loader';
 import SecondaryButton from '../../../../Shared/Button/SecondaryButton';
 import BareButton from '../../../../Shared/Button/BareButton';
@@ -44,7 +45,7 @@ const LoginForm: FC = () => {
         };
         console.log(loginDetails);
       }}>
-      {({ errors, values, handleChange, handleSubmit }) => (
+      {({ errors, values, handleSubmit }) => (
         <FormContainer
           onSubmit={(e) => {
             e.preventDefault();
@@ -65,19 +66,16 @@ const LoginForm: FC = () => {
               name="email"
               type="email"
               value={values.email}
-              setValue={handleChange}
               error={errorCheck('email', values.email, errors.email)}
             />
           </InputContainer>
 
           <InputContainer>
-            <InputField
+            <PasswordField
               label="Password"
               placeholder="Enter 8 characters or more"
               name="password"
-              type="password"
               value={values.password}
-              setValue={handleChange}
               error={errorCheck('password', values.password, errors.password)}
             />
           </InputContainer>
