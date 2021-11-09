@@ -6,6 +6,7 @@ import * as Yup from 'yup';
 
 import InputField from '../../../../Shared/FormFields/InputField';
 import PasswordField from '../../../../Shared/FormFields/InputField/Password';
+import CheckboxField from '../../../../Shared/FormFields/Checkbox';
 import Loader from '../../Loader';
 import SecondaryButton from '../../../../Shared/Button/SecondaryButton';
 import DefaultButton from '../../../../Shared/Button/DefaultButton';
@@ -17,12 +18,14 @@ import { FormContainer, InputContainer, FormError } from '../form.styled';
 const SignUpSchema = Yup.object().shape({
   email: Yup.string().email('Enter a valid email').required('Required'),
   password: Yup.string().min(2, 'Too Short!').max(50, 'Too Long!').required('Required'),
+  terms: Yup.boolean().required('Required'),
 });
 
 const SignupForm: FC = () => {
   const initialValues = {
     email: '',
     password: '',
+    terms: false,
   };
   const signupErrorMessage = {
     errorMessages: [],
@@ -31,14 +34,14 @@ const SignupForm: FC = () => {
   };
   const IsCreatingAccount = false;
 
-  const errorCheck = (key: string, value: string, error: string | undefined) => {
+  const errorCheck = (key: string, value: string | boolean, error: string | undefined) => {
     if (value) {
       return signupErrorMessage.errorFields.includes(key) || error !== undefined;
     }
     return false;
   };
 
-  const errorMessage = (key: string, value: string, error: string | undefined) => {
+  const errorMessage = (key: string, value: string | boolean, error: string | undefined) => {
     if (value) {
       return signupErrorMessage.errorMessages[key] || (error !== undefined ? error : '');
     }
@@ -152,6 +155,16 @@ const SignupForm: FC = () => {
               value={values.password}
               error={errorCheck('password', values.password, errors.password)}
               errorMessage={errorMessage('password', values.password, errors.password)}
+            />
+          </InputContainer>
+
+          <InputContainer>
+            <CheckboxField
+              label="By clicking this, you agree to our terms and conditions"
+              name="terms"
+              value={values.terms}
+              error={errorCheck('terms', values.terms, errors.terms)}
+              errorMessage={errorMessage('terms', values.terms, errors.terms)}
             />
           </InputContainer>
 

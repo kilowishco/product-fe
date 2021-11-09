@@ -1,3 +1,4 @@
+import { Formik } from 'formik';
 import { Meta } from '@storybook/react';
 
 import CheckboxField from './checkbox';
@@ -33,7 +34,11 @@ export default {
   },
 } as Meta;
 
-const CheckboxFieldTemplate = (args) => <CheckboxField {...args} />;
+const CheckboxFieldTemplate = (args) => (
+  <Formik initialValues={{}} onSubmit={() => null}>
+    <CheckboxField {...args} />
+  </Formik>
+);
 
 export const Base = CheckboxFieldTemplate.bind({});
 

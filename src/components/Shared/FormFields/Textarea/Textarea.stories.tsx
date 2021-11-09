@@ -1,3 +1,4 @@
+import { Formik } from 'formik';
 import { Meta } from '@storybook/react';
 
 import Textarea from './textarea';
@@ -33,7 +34,11 @@ export default {
   },
 } as Meta;
 
-const TextareaTemplate = (args) => <Textarea {...args} />;
+const TextareaTemplate = (args) => (
+  <Formik initialValues={{}} onSubmit={() => null}>
+    <Textarea {...args} />
+  </Formik>
+);
 
 export const Base = TextareaTemplate.bind({});
 

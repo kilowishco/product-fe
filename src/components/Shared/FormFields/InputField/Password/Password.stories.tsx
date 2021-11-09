@@ -1,3 +1,4 @@
+import { Formik } from 'formik';
 import { Meta } from '@storybook/react';
 
 import PasswordField from './password';
@@ -33,7 +34,11 @@ export default {
   },
 } as Meta;
 
-const PasswordFieldTemplate = (args) => <PasswordField {...args} />;
+const PasswordFieldTemplate = (args) => (
+  <Formik initialValues={{}} onSubmit={() => null}>
+    <PasswordField {...args} />
+  </Formik>
+);
 
 export const Base = PasswordFieldTemplate.bind({});
 

@@ -7,8 +7,20 @@ export default {
   component: ListCard,
   title: 'Components/ListCard',
   argTypes: {
-    text: {
-      description: 'Text in the ListCard',
+    title: {
+      description: 'Title in the ListCard',
+      control: 'text',
+    },
+    description: {
+      description: 'Description of the ListCard',
+      control: 'text',
+    },
+    link: {
+      description: 'Link of the ListCard',
+      control: 'text',
+    },
+    image: {
+      description: 'Header image of the ListCard',
       control: 'text',
     },
   },
@@ -19,7 +31,11 @@ const ListCardTemplate = (args) => <ListCard {...args} />;
 export const Base = ListCardTemplate.bind({});
 
 Base.args = {
-  text: 'or',
+  title: '30 days celebration',
+  description:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sollicitudin turpis justo... ',
+  link: '/',
+  image: '',
 };
 
 const ListCardPlaceholderTemplate = (args) => <ListCardPlaceholder {...args} />;

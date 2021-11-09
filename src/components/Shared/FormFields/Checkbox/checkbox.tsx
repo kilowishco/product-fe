@@ -1,10 +1,10 @@
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 import { useFormikContext } from 'formik';
 
 import { CheckboxLabel, CheckboxWrapper, CheckboxError } from './checkbox.styled';
 
 type CheckboxFieldProps = {
-  label: string;
+  label: ReactNode | string;
   name: string;
   value: boolean;
   error: boolean;

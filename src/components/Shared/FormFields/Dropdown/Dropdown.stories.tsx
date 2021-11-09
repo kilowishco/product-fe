@@ -1,3 +1,4 @@
+import { Formik } from 'formik';
 import { Meta } from '@storybook/react';
 
 import DropdownField from './dropdown';
@@ -42,7 +43,11 @@ export default {
   },
 } as Meta;
 
-const DropdownFieldTemplate = (args) => <DropdownField {...args} />;
+const DropdownFieldTemplate = (args) => (
+  <Formik initialValues={{}} onSubmit={() => null}>
+    <DropdownField {...args} />
+  </Formik>
+);
 
 export const Base = DropdownFieldTemplate.bind({});
 

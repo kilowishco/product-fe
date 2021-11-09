@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 import Link from 'next/link';
 
 import { TextLinkContainer } from './text-link.styled';
@@ -6,13 +6,14 @@ import { TextLinkContainer } from './text-link.styled';
 type TextLinkProps = {
   link: string;
   color?: string;
+  text: ReactNode | string;
 };
 
-const TextLink: FC<TextLinkProps> = ({ link, color, children }) => {
+const TextLink: FC<TextLinkProps> = ({ link, color, text }) => {
   return (
     <TextLinkContainer style={{ '--color-bare': color }}>
       <Link href={link}>
-        <a>{children}</a>
+        <a>{text}</a>
       </Link>
     </TextLinkContainer>
   );

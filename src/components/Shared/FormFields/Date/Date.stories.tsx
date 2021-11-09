@@ -1,3 +1,4 @@
+import { Formik } from 'formik';
 import { Meta } from '@storybook/react';
 
 import DateField from './date';
@@ -33,7 +34,11 @@ export default {
   },
 } as Meta;
 
-const DateFieldTemplate = (args) => <DateField {...args} />;
+const DateFieldTemplate = (args) => (
+  <Formik initialValues={{}} onSubmit={() => null}>
+    <DateField {...args} />
+  </Formik>
+);
 
 export const Base = DateFieldTemplate.bind({});
 

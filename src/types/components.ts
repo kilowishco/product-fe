@@ -9,8 +9,8 @@ export interface CustomStyleProperties extends CSSProperties {
 }
 
 export type ButtonProps = {
-  size: string;
   text: string | ReactNode;
+  size?: string;
   className?: string;
   style?: CustomStyleProperties;
   disabled?: boolean;

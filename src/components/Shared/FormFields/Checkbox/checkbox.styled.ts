@@ -1,26 +1,17 @@
 import styled from 'styled-components';
 
-export const CheckboxLabel = styled.label`
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: var(--color-input-black);
-  display: block;
-  margin-bottom: 0.625rem;
-`;
-
 export const CheckboxWrapper = styled.div`
   position: relative;
+  display: flex;
+  align-items: center;
 
   input {
     font-size: 0.75rem;
     line-height: 1rem;
     color: var(--color-input-black);
     background: transparent;
-    padding: 1rem 1.5rem;
-    width: 100%;
+    margin: 0;
     outline: none;
-    border: 0.7px solid var(--color-light-grey);
-    border-radius: 0.25rem;
 
     &::-ms-input-placeholder {
       color: var(--color-placeholder-grey);
@@ -50,6 +41,13 @@ export const CheckboxWrapper = styled.div`
       border-color: var(--color-red);
     }
   }
+`;
+
+export const CheckboxLabel = styled.label`
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: var(--color-mid-grey);
+  margin-left: 0.625rem;
 `;
 
 export const CheckboxError = styled.p`

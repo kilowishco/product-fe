@@ -32,7 +32,7 @@ const DropdownField: FC<DropdownFieldProps> = ({
   const { setFieldValue } = useFormikContext();
   const defaultValue = {
     value,
-    label: typeof value === 'string' ? `${value[0].toUpperCase()}${value.substring(1)}` : value,
+    label: typeof value === 'string' ? `${value[0]?.toUpperCase()}${value?.substring(1)}` : value,
   };
 
   return (

@@ -1,3 +1,4 @@
+import { Formik } from 'formik';
 import { Meta } from '@storybook/react';
 
 import InputField from './input-field';
@@ -38,7 +39,11 @@ export default {
   },
 } as Meta;
 
-const InputFieldTemplate = (args) => <InputField {...args} />;
+const InputFieldTemplate = (args) => (
+  <Formik initialValues={{}} onSubmit={() => null}>
+    <InputField {...args} />
+  </Formik>
+);
 
 export const Base = InputFieldTemplate.bind({});
 
