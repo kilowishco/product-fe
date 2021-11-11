@@ -1,3 +1,5 @@
+import { GiversProps } from './givers';
+
 //==============================================================================
 // List
 //==============================================================================
@@ -7,4 +9,5 @@ export type ListProps = {
   description: string;
   link: string;
   image?: string;
+  givers?: GiversProps;
 };

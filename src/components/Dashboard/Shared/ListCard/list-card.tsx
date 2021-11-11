@@ -10,7 +10,7 @@ import {
 } from './list-card.styled';
 import BareButton from '../../../Shared/Button/BareButton';
 
-import { ListProps } from '../../../../types/list';
+import { ListProps } from '../../../../types';
 
 const ListCard: FC<ListProps> = ({ title, description, link, image }) => {
   return (

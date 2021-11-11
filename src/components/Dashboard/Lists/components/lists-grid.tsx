@@ -5,18 +5,21 @@ import ListCard, { ListCardPlaceholder } from '../../Shared/ListCard';
 
 import { ListProps } from '../../../../types/list';
 import { ListsGridContainer, ListsGridHeader, ListsGridWrapper } from './lists-grid.styled';
+import { defaultLists } from '../../../../constants/lists';
 
 type ListsGridProps = {
   lists?: Array<ListProps>;
 };
 
 const ListsGrid: FC<ListsGridProps> = ({ lists }) => {
+  const listCards = lists || defaultLists;
+
   return (
     <ListsGridContainer>
       <ListsGridHeader>
         <SpacedList>
           <h2>My Lists</h2>
-          {lists && (
+          {listCards && (
             <BareButton
               text={
                 <>
@@ -59,10 +62,10 @@ const ListsGrid: FC<ListsGridProps> = ({ lists }) => {
         </SpacedList>
       </ListsGridHeader>
 
-      {lists.length > 0 ? (
+      {listCards.length > 0 ? (
         <ListsGridWrapper>
-          {lists.map((list) => (
-            <React.Fragment key={list.link}>
+          {listCards.map((list) => (
+            <React.Fragment key={list.title}>
               <ListCard
                 title={list.title}
                 description={list.description}

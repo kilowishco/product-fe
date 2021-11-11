@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { DashboardWrapperContainer } from './dashboard-wrapper.styled';
+import { DashboardWrapperContainer, MainSection } from './dashboard-wrapper.styled';
 import SidebarMenu from '../SidebarMenu';
 
 type DashboardWrapperProps = {
@@ -10,7 +10,7 @@ const DashboardWrapper: FC<DashboardWrapperProps> = ({ active, children }) => {
   return (
     <DashboardWrapperContainer>
       <SidebarMenu active={active} />
-      {children}
+      <MainSection>{children}</MainSection>
     </DashboardWrapperContainer>
   );
 };

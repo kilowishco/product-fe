@@ -20,6 +20,7 @@ const GlobalStyles = createGlobalStyle`
     --color-light-blue: #E9E9FF;
     --color-input-black: #2E353C;
     --color-card-black: #252D3A;
+    --color-card-light: #8C8B97;
     --color-card-divider: #F8F8F9;
     --color-placeholder-grey: #DDE0E5;
 
@@ -49,6 +50,11 @@ const GlobalStyles = createGlobalStyle`
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
+  section {
+    max-width: initial;
+    padding: 0;
+  }
+
   .sr-only {
     border: 0 !important;
     clip: rect(1px, 1px, 1px, 1px) !important;
@@ -61,7 +67,7 @@ const GlobalStyles = createGlobalStyle`
     position: absolute !important;
     width: 1px !important;
     white-space: nowrap !important;
-}
+  }
 
   .--center {
     text-align: center;

@@ -5,6 +5,8 @@ export const CardContainer = styled.li`
   background: var(--color-white);
   border-radius: 0.625rem;
   width: max-content;
+  margin: 0;
+  list-style-type: none;
 
   h3 {
     font-weight: bold;

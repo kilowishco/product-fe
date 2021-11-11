@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-export const ListsGridContainer = styled.section`
+export const GiversGridContainer = styled.section`
   width: 100%;
 `;
 
-export const ListsGridHeader = styled.div`
+export const GiversGridHeader = styled.div`
   margin-bottom: 3.75rem;
 
   h2 {
@@ -14,13 +14,9 @@ export const ListsGridHeader = styled.div`
     letter-spacing: -0.56316px;
     margin: 0;
   }
-
-  svg {
-    margin-right: 0.325rem;
-  }
 `;
 
-export const ListsGridWrapper = styled.ul`
+export const GiversGridWrapper = styled.ul`
   display: grid;
   gap: 4rem;
   grid-template-columns: repeat(auto-fill, 22.5rem);

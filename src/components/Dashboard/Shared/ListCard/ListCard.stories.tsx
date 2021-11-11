@@ -38,6 +38,10 @@ Base.args = {
   image: '',
 };
 
-const ListCardPlaceholderTemplate = (args) => <ListCardPlaceholder {...args} />;
+const ListCardPlaceholderTemplate = (args) => (
+  <div style={{ backgroundColor: 'var(--color-card-divider)', padding: '2rem' }}>
+    <ListCardPlaceholder {...args} />
+  </div>
+);
 
 export const Placeholder = ListCardPlaceholderTemplate.bind({});

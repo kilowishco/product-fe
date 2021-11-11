@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ListCardContainer = styled.section`
   position: relative;
-  max-width: 22.5rem;
+  width: 22.5rem;
   padding: 2.5rem 2.5rem 0;
 
   h3 {
