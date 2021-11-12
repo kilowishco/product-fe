@@ -10,6 +10,7 @@ const PrimaryButton: FC<ButtonProps> = ({
   type,
   disabled,
   buttonRef,
+  full,
 }) => {
   return (
     <PrimaryButtonContainer
@@ -20,6 +21,7 @@ const PrimaryButton: FC<ButtonProps> = ({
       type={type}
       disabled={disabled}
       ref={buttonRef}
+      full={full}
     />
   );
 };

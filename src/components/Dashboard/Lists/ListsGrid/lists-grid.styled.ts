@@ -1,22 +1,28 @@
 import styled from 'styled-components';
 
-export const GiversGridContainer = styled.section`
+export const ListsGridContainer = styled.section`
   width: 100%;
 `;
 
-export const GiversGridHeader = styled.div`
+export const ListsGridHeader = styled.div`
   margin-bottom: 3.75rem;
 
   h2 {
     font-weight: 600;
     font-size: 1.625rem;
+    font-family: 'DM Sans', Inter, Helvetica, Arial, Verdana, Tahoma, sans-serif;
     line-height: 3.5rem;
     letter-spacing: -0.56316px;
+    color: var(--color-form-black);
     margin: 0;
+  }
+
+  svg {
+    margin-right: 0.325rem;
   }
 `;
 
-export const GiversGridWrapper = styled.ul`
+export const ListsGridWrapper = styled.ul`
   display: grid;
   gap: 4rem;
   grid-template-columns: repeat(auto-fill, 22.5rem);

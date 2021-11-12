@@ -17,4 +17,5 @@ export type ButtonProps = {
   type?: 'submit' | 'reset' | 'button';
   onClick?: () => void;
   buttonRef?: Ref<HTMLButtonElement>;
+  full?: boolean;
 };

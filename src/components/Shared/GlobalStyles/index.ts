@@ -19,6 +19,7 @@ const GlobalStyles = createGlobalStyle`
     --color-red: #FF4343;
     --color-light-blue: #E9E9FF;
     --color-input-black: #2E353C;
+    --color-form-black: #19191B;
     --color-card-black: #252D3A;
     --color-card-light: #8C8B97;
     --color-card-divider: #F8F8F9;

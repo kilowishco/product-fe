@@ -1,17 +1,19 @@
 import { FC } from 'react';
 
-import ListsGrid from './components/lists-grid';
+import ListsGrid from './ListsGrid';
+// import CreateEventForm from './CreateEventForm';
 import ErrorBoundary from '../../Shared/ErrorBoundary';
 import DashboardWrapper from '../Shared/DashboardWrapper';
 
-const Login: FC = () => {
+const Lists: FC = () => {
   return (
     <ErrorBoundary link="/">
       <DashboardWrapper active="Lists">
         <ListsGrid />
+        {/* <CreateEventForm /> */}
       </DashboardWrapper>
     </ErrorBoundary>
   );
 };
 
-export default Login;
+export default Lists;

@@ -10,6 +10,7 @@ const SecondaryButton: FC<ButtonProps> = ({
   type,
   disabled,
   buttonRef,
+  full,
 }) => {
   return (
     <SecondaryButtonContainer
@@ -20,6 +21,7 @@ const SecondaryButton: FC<ButtonProps> = ({
       type={type}
       disabled={disabled}
       ref={buttonRef}
+      full={full}
     />
   );
 };

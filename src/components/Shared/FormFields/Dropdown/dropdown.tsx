@@ -1,4 +1,4 @@
-import { FC, ChangeEvent } from 'react';
+import { FC } from 'react';
 import { useFormikContext } from 'formik';
 import Select, { OptionsOrGroups, GroupBase } from 'react-select';
 
@@ -13,7 +13,6 @@ type DropdownFieldProps = {
     GroupBase<{ value: string | number; label: string | number }>
   >;
   value: string | number;
-  setValue: (event: ChangeEvent<HTMLSelectElement>) => void;
   error: boolean;
   errorMessage?: string;
   full?: boolean;
@@ -32,7 +31,7 @@ const DropdownField: FC<DropdownFieldProps> = ({
   const { setFieldValue } = useFormikContext();
   const defaultValue = {
     value,
-    label: typeof value === 'string' ? `${value[0]?.toUpperCase()}${value?.substring(1)}` : value,
+    label: value,
   };
 
   return (
@@ -43,7 +42,7 @@ const DropdownField: FC<DropdownFieldProps> = ({
         <Select
           options={options}
           defaultValue={defaultValue}
-          onChange={(val) => setFieldValue(name, val)}
+          onChange={(val) => setFieldValue(name, val.value)}
           placeholder={placeholder}
         />
       </DropdownWrapper>

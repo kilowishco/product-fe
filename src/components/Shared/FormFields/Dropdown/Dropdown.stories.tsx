@@ -21,8 +21,7 @@ export default {
     },
     options: {
       description: 'Options of dropdown field',
-      options: ['1', '2', '3', '4', '5'],
-      control: 'radio',
+      control: 'object',
     },
     value: {
       description: 'Value of dropdown field',
@@ -55,7 +54,29 @@ Base.args = {
   label: 'Options',
   name: '',
   placeholder: 'Select option',
-  value: '',
+  value: 1,
+  options: [
+    {
+      label: 1,
+      value: 1,
+    },
+    {
+      label: 2,
+      value: 2,
+    },
+    {
+      label: 3,
+      value: 3,
+    },
+    {
+      label: 4,
+      value: 4,
+    },
+    {
+      label: 5,
+      value: 5,
+    },
+  ],
   error: false,
   errorMessage: '',
   full: false,

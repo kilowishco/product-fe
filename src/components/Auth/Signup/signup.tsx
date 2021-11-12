@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import SignupForm from '../Shared/Form/SignupForm';
+import SignupForm from '../Shared/SignupForm';
 import ErrorBoundary from '../../Shared/ErrorBoundary';
 import AuthWrapper from '../auth';
 

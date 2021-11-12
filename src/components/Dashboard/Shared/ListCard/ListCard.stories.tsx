@@ -26,7 +26,11 @@ export default {
   },
 } as Meta;
 
-const ListCardTemplate = (args) => <ListCard {...args} />;
+const ListCardTemplate = (args) => (
+  <div style={{ backgroundColor: 'var(--color-card-divider)', padding: '2rem' }}>
+    <ListCard {...args} />
+  </div>
+);
 
 export const Base = ListCardTemplate.bind({});
 

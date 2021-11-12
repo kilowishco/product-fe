@@ -57,7 +57,7 @@ const ListCard: FC<ListProps> = ({ title, description, link, image }) => {
         </ListCardControls>
 
         <ListImageContainer>
-          {image ? <Image src={image} alt={`title`} /> : <div className="placeholder" />}
+          {image ? <Image src={image} alt={`${title}`} /> : <div className="placeholder" />}
         </ListImageContainer>
 
         <h3>{title}</h3>

@@ -4,16 +4,16 @@ import { FC } from 'react';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
-import InputField from '../../../../Shared/FormFields/InputField';
-import PasswordField from '../../../../Shared/FormFields/InputField/Password';
-import CheckboxField from '../../../../Shared/FormFields/Checkbox';
-import Loader from '../../Loader';
-import SecondaryButton from '../../../../Shared/Button/SecondaryButton';
-import DefaultButton from '../../../../Shared/Button/DefaultButton';
-import SpacedList from '../../../../Shared/SpacedList';
-import Divider from '../../../../Shared/Divider';
+import InputField from '../../../Shared/FormFields/InputField';
+import PasswordField from '../../../Shared/FormFields/InputField/Password';
+import CheckboxField from '../../../Shared/FormFields/Checkbox';
+import Loader from '../../../Shared/Loader';
+import SecondaryButton from '../../../Shared/Button/SecondaryButton';
+import DefaultButton from '../../../Shared/Button/DefaultButton';
+import SpacedList from '../../../Shared/SpacedList';
+import Divider from '../../../Shared/Divider';
 
-import { FormContainer, InputContainer, FormError } from '../form.styled';
+import { FormContainer, InputContainer, FormError } from '../../../Shared/Form/form.styled';
 
 const SignUpSchema = Yup.object().shape({
   email: Yup.string().email('Enter a valid email').required('Required'),

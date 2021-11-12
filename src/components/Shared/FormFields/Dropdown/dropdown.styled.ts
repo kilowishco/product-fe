@@ -12,10 +12,25 @@ export const DropdownWrapper = styled.div`
   font-size: 0.75rem;
   line-height: 1rem;
   width: 100%;
-  color: #252525;
-  > div > div {
-    padding: 0.2rem;
-    border-radius: 1px;
+  color: var(--color-input-black);
+
+  > div > div:first-of-type {
+    padding: 0.75rem 1.25rem;
+    border: 0.7px solid var(--color-light-grey);
+    border-radius: 5px;
+    background: transparent;
+
+    > div {
+      padding: 0;
+    }
+
+    > div > span {
+      display: none;
+    }
+
+    > div > div {
+      padding: 0;
+    }
   }
 
   &.error {
@@ -25,6 +40,7 @@ export const DropdownWrapper = styled.div`
 
 export const DropdownFieldError = styled.p`
   color: var(--color-red);
-  font-size: 1.125rem;
-  line-height: 1.5rem;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
 `;

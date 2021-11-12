@@ -95,7 +95,7 @@ export const InputWrapper = styled.div`
 
 export const InputFieldError = styled.p`
   color: var(--color-red);
-  font-size: 1rem;
-  line-height: 1.125rem;
-  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
 `;

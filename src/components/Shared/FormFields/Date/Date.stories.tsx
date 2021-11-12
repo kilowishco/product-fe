@@ -46,7 +46,7 @@ Base.args = {
   label: 'Date',
   name: '',
   placeholder: 'Select date',
-  value: '',
+  value: new Date(),
   error: false,
   errorMessage: '',
   full: false,

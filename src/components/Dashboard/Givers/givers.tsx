@@ -1,10 +1,10 @@
 import { FC } from 'react';
 
-import GiversGrid from './components/givers-grid';
+import GiversGrid from './GiversGrid';
 import ErrorBoundary from '../../Shared/ErrorBoundary';
 import DashboardWrapper from '../Shared/DashboardWrapper';
 
-const Login: FC = () => {
+const Givers: FC = () => {
   return (
     <ErrorBoundary link="/">
       <DashboardWrapper active="Givers">
@@ -14,4 +14,4 @@ const Login: FC = () => {
   );
 };
 
-export default Login;
+export default Givers;

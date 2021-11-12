@@ -14,4 +14,8 @@ export const CardContainer = styled.li`
     line-height: 1.5rem;
     color: var(--color-card-black);
   }
+
+  &.full {
+    width: 100%;
+  }
 `;

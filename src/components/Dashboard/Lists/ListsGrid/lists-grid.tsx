@@ -3,7 +3,7 @@ import BareButton from '../../../Shared/Button/BareButton';
 import SpacedList from '../../../Shared/SpacedList';
 import ListCard, { ListCardPlaceholder } from '../../Shared/ListCard';
 
-import { ListProps } from '../../../../types/list';
+import { ListProps } from '../../../../types';
 import { ListsGridContainer, ListsGridHeader, ListsGridWrapper } from './lists-grid.styled';
 import { defaultLists } from '../../../../constants/lists';
 

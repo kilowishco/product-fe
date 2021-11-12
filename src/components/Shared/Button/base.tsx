@@ -12,10 +12,12 @@ const dimension: ButtonTheme = {
 };
 
 const BaseButton = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ size, text, className, onClick, type, disabled, style }, ref) => {
+  ({ size, text, className, onClick, type, disabled, style, full }, ref) => {
     return (
       <ButtonContainer
-        className={`${dimension[size]} ${className} ${disabled ? 'disabled' : ''}`}
+        className={`${dimension[size]} ${className} ${full ? 'full' : ''} ${
+          disabled ? 'disabled' : ''
+        }`}
         type={type === 'submit' ? 'submit' : 'button'}
         onClick={onClick}
         ref={ref}

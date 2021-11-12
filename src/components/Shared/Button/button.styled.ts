@@ -18,6 +18,10 @@ export const ButtonContainer = styled.button`
     opacity: 0.5;
   }
 
+  &.full {
+    width: 100%;
+  }
+
   &.button-sm {
     height: 2.125rem;
     font-size: 0.75rem;

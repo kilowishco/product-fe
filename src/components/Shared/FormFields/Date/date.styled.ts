@@ -10,8 +10,17 @@ export const DateLabel = styled.label`
 
 export const DatePickerWrapper = styled.div`
   width: 100%;
-  padding: 0 0 0.5rem 0;
-  border-bottom: 1px solid var(--color-border-bottom);
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: var(--color-input-black);
+  background: transparent;
+  padding: 1rem 1.5rem;
+  outline: none;
+  border: 0.7px solid var(--color-light-grey);
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   &.active {
     border-color: var(--color-secondary);
@@ -26,18 +35,25 @@ export const DatePickerWrapper = styled.div`
     align-items: center;
     border: none;
 
-    svg {
-      width: 1rem;
-    }
-
     button {
       margin-top: 0;
+      padding: 0;
     }
+  }
+
+  .date-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .react-date-picker__inputGroup {
+    display: none;
   }
 `;
 
 export const DateFieldError = styled.p`
   color: var(--color-red);
-  font-size: 1.125rem;
-  line-height: 1.5rem;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
 `;

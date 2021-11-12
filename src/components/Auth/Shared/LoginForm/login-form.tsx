@@ -4,13 +4,13 @@ import { FC } from 'react';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
-import InputField from '../../../../Shared/FormFields/InputField';
-import PasswordField from '../../../../Shared/FormFields/InputField/Password';
-import Loader from '../../Loader';
-import SecondaryButton from '../../../../Shared/Button/SecondaryButton';
-import BareButton from '../../../../Shared/Button/BareButton';
+import InputField from '../../../Shared/FormFields/InputField';
+import PasswordField from '../../../Shared/FormFields/InputField/Password';
+import Loader from '../../../Shared/Loader';
+import SecondaryButton from '../../../Shared/Button/SecondaryButton';
+import BareButton from '../../../Shared/Button/BareButton';
 
-import { FormContainer, InputContainer, FormError } from '../form.styled';
+import { FormContainer, InputContainer, FormError } from '../../../Shared/Form/form.styled';
 
 const LoginSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email').required('Required'),
