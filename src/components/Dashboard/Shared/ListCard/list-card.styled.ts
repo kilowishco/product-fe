@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ListCardContainer = styled.section`
   position: relative;
-  width: 22.5rem;
+  width: 100%;
   padding: 2.5rem 2.5rem 0;
 
   h3 {
@@ -20,6 +20,10 @@ export const ListCardContainer = styled.section`
     letter-spacing: 0.01rem;
     color: var(--color-mid-grey);
     margin-bottom: 2.125rem;
+  }
+
+  @media (min-width: 476px) {
+    width: 22.5rem;
   }
 `;
 

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const CheckboxWrapper = styled.div`
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 
   input {
     font-size: 0.75rem;
@@ -40,6 +40,10 @@ export const CheckboxWrapper = styled.div`
     &.error {
       border-color: var(--color-red);
     }
+  }
+
+  @media (min-width: 768px) {
+    align-items: center;
   }
 `;
 

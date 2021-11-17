@@ -73,6 +73,24 @@ const GlobalStyles = createGlobalStyle`
   .--center {
     text-align: center;
   }
+
+  .--desktop-only {
+    display: none;
+  }
+
+  .--mobile-only {
+    display: block;
+  }
+
+  @media (min-width: 768px) {
+    .--desktop-only {
+      display: block;
+    }
+
+    .--mobile-only {
+      display: none;
+    }
+  }
 `;
 
 export default GlobalStyles;

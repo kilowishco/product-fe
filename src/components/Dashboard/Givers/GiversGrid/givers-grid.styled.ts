@@ -18,11 +18,20 @@ export const GiversGridHeader = styled.div`
 `;
 
 export const GiversGridWrapper = styled.ul`
-  display: grid;
-  gap: 4rem;
-  grid-template-columns: repeat(auto-fill, 22.5rem);
-  justify-content: space-between;
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (max-width: 476px) {
+    > * + * {
+      margin-top: 1.25rem;
+    }
+  }
+
+  @media (min-width: 476px) {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(auto-fill, 22.5rem);
+    justify-content: space-between;
+  }
 `;

@@ -11,7 +11,7 @@ export const VerifyContainer = styled.div`
     font-size: 1.25rem;
     margin-top: 1.25rem;
     margin-bottom: 1.25rem;
-    color: var(--color-input-black);
+    color: var(--color-form-black);
     line-height: 1.3rem;
     font-weight: 500;
     font-family: 'DM Sans', Inter, Helvetica, Arial, Verdana, Tahoma, sans-serif;
@@ -25,6 +25,12 @@ export const VerifyContainer = styled.div`
 
     span {
       font-weight: 500;
+    }
+  }
+
+  @media (min-width: 768px) {
+    h3 {
+      margin-bottom: 2.625rem;
     }
   }
 `;

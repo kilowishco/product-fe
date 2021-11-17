@@ -16,7 +16,7 @@ const ListsGrid: FC<ListsGridProps> = ({ lists }) => {
 
   return (
     <ListsGridContainer>
-      <ListsGridHeader>
+      <ListsGridHeader className="--desktop-only">
         <SpacedList>
           <h2>My Lists</h2>
           {listCards && (

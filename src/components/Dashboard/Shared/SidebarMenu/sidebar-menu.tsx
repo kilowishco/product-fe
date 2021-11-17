@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import Link from 'next/link';
 import { SidebarMenuContainer, SidebarMenuTitle, SidebarMenuItem } from './sidebar-menu.styled';
 import Sidebar from '../Sidebar';
 
@@ -9,7 +10,7 @@ type SidebarMenuProps = {
 const SidebarMenu: FC<SidebarMenuProps> = ({ active }) => {
   const dashboardMenu = [
     {
-      title: 'menu',
+      title: 'Menu',
       items: [
         {
           title: 'Lists',
@@ -78,7 +79,7 @@ const SidebarMenu: FC<SidebarMenuProps> = ({ active }) => {
       ],
     },
     {
-      title: 'account',
+      title: 'Account',
       items: [
         {
           title: 'Profile',
@@ -148,19 +149,42 @@ const SidebarMenu: FC<SidebarMenuProps> = ({ active }) => {
     },
   ];
   return (
-    <Sidebar>
+    <Sidebar active={active}>
       <SidebarMenuContainer>
-        {dashboardMenu.map((menuGroup) => (
-          <React.Fragment key={menuGroup.title}>
-            <SidebarMenuTitle>{menuGroup.title}</SidebarMenuTitle>
-            {menuGroup.items.map((item) => (
-              <SidebarMenuItem key={item.title} className={active === item.title ? 'active' : ''}>
-                {item.icon}
-                {item.title}
-              </SidebarMenuItem>
-            ))}
-          </React.Fragment>
-        ))}
+        {dashboardMenu.map((menuGroup) => {
+          if (menuGroup.title === 'Account') {
+            return (
+              <div className="account-menu" key={menuGroup.title}>
+                <SidebarMenuTitle>{menuGroup.title}</SidebarMenuTitle>
+                {menuGroup.items.map((item) => (
+                  <Link href={`/dashboard/${item.title.toLowerCase()}`} key={item.title}>
+                    <a>
+                      <SidebarMenuItem className={active === item.title ? 'active' : ''}>
+                        {item.icon}
+                        {item.title}
+                      </SidebarMenuItem>
+                    </a>
+                  </Link>
+                ))}
+              </div>
+            );
+          }
+          return (
+            <React.Fragment key={menuGroup.title}>
+              <SidebarMenuTitle>{menuGroup.title}</SidebarMenuTitle>
+              {menuGroup.items.map((item) => (
+                <Link href={`/dashboard/${item.title.toLowerCase()}`} key={item.title}>
+                  <a>
+                    <SidebarMenuItem className={active === item.title ? 'active' : ''}>
+                      {item.icon}
+                      {item.title}
+                    </SidebarMenuItem>
+                  </a>
+                </Link>
+              ))}
+            </React.Fragment>
+          );
+        })}
       </SidebarMenuContainer>
     </Sidebar>
   );

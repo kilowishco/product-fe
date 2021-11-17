@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const FormContainer = styled.form`
-  max-width: 480px;
+  max-width: 540px;
   width: 100%;
   margin: 0 auto;
 
@@ -17,8 +17,12 @@ export const FormContainer = styled.form`
     font-weight: 500;
     margin-bottom: 2rem;
     font-size: 1.75rem;
-    line-height: 1.8rem;
+    line-height: 2.25rem;
     letter-spacing: -0.025em;
+  }
+
+  span {
+    font-family: 'DM Sans', Inter, Helvetica, Arial, Verdana, Tahoma, sans-serif;
   }
 
   > p {
@@ -50,6 +54,9 @@ export const FormContainer = styled.form`
     button {
       font-size: 0.875rem;
       width: 100%;
+      height: 3.75rem;
+      font-weight: 400;
+      font-family: 'DM Sans', Inter, Helvetica, Arial, Verdana, Tahoma, sans-serif;
     }
 
     svg {
@@ -58,9 +65,14 @@ export const FormContainer = styled.form`
     }
   }
 
+  .signup-button {
+    margin-top: 2rem;
+  }
+
   .fp-button {
     margin: 1.25rem auto 0;
     width: auto;
+    height: auto;
   }
 
   @media (min-width: 768px) {
@@ -68,6 +80,7 @@ export const FormContainer = styled.form`
       font-size: 2.25rem;
       line-height: 2.5rem;
       text-align: left;
+      margin-bottom: 3.25rem;
     }
 
     > p {
@@ -93,7 +106,21 @@ export const FormContainer = styled.form`
 
 export const InputContainer = styled.div`
   + div {
-    margin-top: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    + div {
+      margin-top: 1.25rem;
+    }
+  }
+`;
+
+export const CheckboxContainer = styled.div`
+  padding-top: 1rem;
+
+  @media (min-width: 768px) {
+    padding-top: 0.5rem;
   }
 `;
 

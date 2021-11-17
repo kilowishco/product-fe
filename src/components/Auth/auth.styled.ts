@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const AuthContainer = styled.main`
   min-height: 100vh;
+  position: relative;
 
   @media (min-width: 768px) {
     display: grid;
@@ -15,11 +16,11 @@ export const AuthFormContainer = styled.section`
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-  padding: 5rem 2rem;
   position: relative;
+  padding: 8.5rem 1.875rem;
 
   @media (min-width: 768px) {
-    padding: 6rem 2rem;
+    padding: 10rem 2rem;
   }
 `;
 

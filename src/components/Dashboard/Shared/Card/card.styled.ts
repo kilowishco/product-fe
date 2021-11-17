@@ -4,7 +4,6 @@ export const CardContainer = styled.li`
   padding: 0;
   background: var(--color-white);
   border-radius: 0.625rem;
-  width: max-content;
   margin: 0;
   list-style-type: none;
 
@@ -17,5 +16,9 @@ export const CardContainer = styled.li`
 
   &.full {
     width: 100%;
+  }
+
+  @media (min-width: 476px) {
+    width: max-content;
   }
 `;

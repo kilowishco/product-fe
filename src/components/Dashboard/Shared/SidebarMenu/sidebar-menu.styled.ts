@@ -5,13 +5,20 @@ export const SidebarMenuContainer = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+
+  .account-menu {
+    position: absolute;
+    left: 0;
+    bottom: 2rem;
+    width: 100%;
+  }
 `;
 
 export const SidebarMenuTitle = styled.div`
   color: var(--color-mid-grey);
   font-size: 1rem;
   line-height: 1.25rem;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.25rem;
   margin-bottom: 0.5rem;
   margin-top: 1.5rem;
   padding-left: 2.125rem;

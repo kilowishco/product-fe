@@ -14,7 +14,7 @@ const GiversGrid: FC<GiversGridProps> = ({ lists }) => {
 
   return (
     <GiversGridContainer>
-      <GiversGridHeader>
+      <GiversGridHeader className="--desktop-only">
         <h2>Gifts &amp; Givers</h2>
       </GiversGridHeader>
 

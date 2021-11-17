@@ -13,7 +13,12 @@ import DefaultButton from '../../../Shared/Button/DefaultButton';
 import SpacedList from '../../../Shared/SpacedList';
 import Divider from '../../../Shared/Divider';
 
-import { FormContainer, InputContainer, FormError } from '../../../Shared/Form/form.styled';
+import {
+  FormContainer,
+  InputContainer,
+  FormError,
+  CheckboxContainer,
+} from '../../../Shared/Form/form.styled';
 
 const SignUpSchema = Yup.object().shape({
   email: Yup.string().email('Enter a valid email').required('Required'),
@@ -64,8 +69,12 @@ const SignupForm: FC = () => {
           onSubmit={(e) => {
             e.preventDefault();
             handleSubmit();
-          }}>
-          <h2>To complete your list, please sign up</h2>
+          }}
+          className="signup-form">
+          <h2>
+            <span className="--desktop-only">To complete your list, please sign up</span>
+            <span className="--mobile-only">Create account!</span>
+          </h2>
 
           <p>
             {signupErrorMessage.hasError && (
@@ -158,7 +167,7 @@ const SignupForm: FC = () => {
             />
           </InputContainer>
 
-          <InputContainer>
+          <CheckboxContainer>
             <CheckboxField
               label="By clicking this, you agree to our terms and conditions"
               name="terms"
@@ -166,7 +175,7 @@ const SignupForm: FC = () => {
               error={errorCheck('terms', values.terms, errors.terms)}
               errorMessage={errorMessage('terms', values.terms, errors.terms)}
             />
-          </InputContainer>
+          </CheckboxContainer>
 
           <SecondaryButton
             className="signup-button"

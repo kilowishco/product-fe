@@ -25,7 +25,7 @@ export const DividerContainer = styled.div`
     content: '';
     position: absolute;
     top: 50%;
-    width: 47%;
+    width: 46%;
     transform: translateY(-50%);
     right: 0;
     height: 1px;
