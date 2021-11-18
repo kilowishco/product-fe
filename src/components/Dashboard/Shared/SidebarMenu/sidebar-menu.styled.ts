@@ -6,7 +6,7 @@ export const SidebarMenuContainer = styled.div`
   justify-content: space-between;
   flex-direction: column;
 
-  .account-menu {
+  .user-menu {
     position: absolute;
     left: 0;
     bottom: 2rem;
@@ -24,6 +24,10 @@ export const SidebarMenuTitle = styled.div`
   padding-left: 2.125rem;
   text-transform: uppercase;
   font-family: 'DM Mono', Inter, Helvetica, Arial, Verdana, Tahoma, sans-serif;
+
+  &.user-menu {
+    margin-top: 5rem;
+  }
 `;
 
 export const SidebarMenuItem = styled.div`

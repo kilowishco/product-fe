@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-curly-brace-presence */
-/* eslint-disable max-lines-per-function */
 import React, { FC } from 'react';
 
 import ListItem, { ListItemPlaceholder } from '../../../../Shared/ListItem';

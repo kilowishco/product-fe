@@ -2,14 +2,14 @@ import styled from 'styled-components';
 
 export const SidebarContainer = styled.section`
   position: fixed;
-  left: 0;
   top: 0;
-  z-index: 1000;
+  left: 0;
+  z-index: 1001;
   transition: transform 400ms ease-in;
   transform: translateX(-15.625rem);
   background-color: var(--color-purple-main);
   width: 15.625rem;
-  padding: 2.25rem 0;
+  padding: 2.25rem 0 5rem;
   height: 100vh;
   overflow-y: auto;
 
@@ -28,6 +28,8 @@ export const SidebarContainer = styled.section`
 
   @media (min-width: 768px) {
     transform: translateX(0);
+    position: sticky;
+    top: 0;
   }
 `;
 
@@ -53,4 +55,15 @@ export const MobileSidebarControl = styled.div`
       font-family: 'DM Sans', Inter, Helvetica, Arial, Verdana, Tahoma, sans-serif;
     }
   }
+`;
+
+export const SidebarOverlay = styled.div`
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #000;
+  opacity: 0.6;
 `;

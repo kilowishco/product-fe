@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-curly-brace-presence */
-/* eslint-disable max-lines-per-function */
 import { FC } from 'react';
 import { Formik, FormikErrors } from 'formik';
 import * as Yup from 'yup';

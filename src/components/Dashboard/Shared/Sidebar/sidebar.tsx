@@ -1,7 +1,7 @@
-import { FC, useState } from 'react';
+import { FC, useState, useEffect, useRef } from 'react';
 import BareButton from '../../../Shared/Button/BareButton';
 import Logo from '../../../Shared/Logo';
-import { SidebarContainer, MobileSidebarControl } from './sidebar.styled';
+import { SidebarContainer, MobileSidebarControl, SidebarOverlay } from './sidebar.styled';
 
 type SidebarProps = {
   active: string;
@@ -9,6 +9,39 @@ type SidebarProps = {
 
 const Sidebar: FC<SidebarProps> = ({ children, active }) => {
   const [open, setOpen] = useState(false);
+  const overlayRef = useRef(null);
+
+  const closeKeyboard = useRef((e: KeyboardEvent) => {
+    // Escape button closes the tooltip
+    if (e.keyCode === 27) {
+      setOpen(false);
+      return;
+    }
+  });
+
+  const closeMouse = useRef(() => {
+    setOpen(false);
+  });
+
+  useEffect(() => {
+    const closeKeyboardFunc = closeKeyboard.current;
+    const closeMouseFunc = closeMouse.current;
+    const overlay = overlayRef.current;
+
+    if (open && overlay) {
+      window.addEventListener('keydown', closeKeyboardFunc);
+      overlay?.addEventListener('click', closeMouseFunc);
+    }
+
+    if (!open) {
+      window.removeEventListener('keydown', closeKeyboardFunc);
+    }
+
+    return () => {
+      overlay?.removeEventListener('click', closeMouseFunc);
+      window.removeEventListener('keydown', closeKeyboardFunc);
+    };
+  }, [open]);
 
   return (
     <>
@@ -61,6 +94,7 @@ const Sidebar: FC<SidebarProps> = ({ children, active }) => {
           />
         )}
       </MobileSidebarControl>
+      {open && <SidebarOverlay ref={overlayRef} />}
       <SidebarContainer className={open ? 'open' : ''}>
         <Logo />
         {children}

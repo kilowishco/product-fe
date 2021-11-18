@@ -1,4 +1,4 @@
-import { ReactElement, useEffect } from 'react';
+import { ReactElement, useLayoutEffect } from 'react';
 import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 
@@ -14,7 +14,7 @@ const api = new APIClient();
 function AuthWaitlistVerifyPage({ verified, email }: WaitlistVerifyProps): ReactElement {
   const router = useRouter();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (typeof window !== undefined && (verified || !email)) {
       router.push('/');
     }

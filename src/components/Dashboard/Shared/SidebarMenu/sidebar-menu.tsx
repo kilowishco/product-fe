@@ -39,8 +39,9 @@ const SidebarMenu: FC<SidebarMenuProps> = ({ active }) => {
           title: 'Givers',
           icon: (
             <svg
-              width="20"
-              height="20"
+              // Edited the width for conformity
+              width="14"
+              height="14"
               viewBox="0 0 20 20"
               fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -124,6 +125,11 @@ const SidebarMenu: FC<SidebarMenuProps> = ({ active }) => {
             </svg>
           ),
         },
+      ],
+    },
+    {
+      title: 'User',
+      items: [
         {
           title: 'Log Out',
           icon: (
@@ -148,43 +154,46 @@ const SidebarMenu: FC<SidebarMenuProps> = ({ active }) => {
       ],
     },
   ];
+
   return (
     <Sidebar active={active}>
       <SidebarMenuContainer>
-        {dashboardMenu.map((menuGroup) => {
-          if (menuGroup.title === 'Account') {
-            return (
-              <div className="account-menu" key={menuGroup.title}>
-                <SidebarMenuTitle>{menuGroup.title}</SidebarMenuTitle>
-                {menuGroup.items.map((item) => (
-                  <Link href={`/dashboard/${item.title.toLowerCase()}`} key={item.title}>
-                    <a>
-                      <SidebarMenuItem className={active === item.title ? 'active' : ''}>
-                        {item.icon}
-                        {item.title}
-                      </SidebarMenuItem>
-                    </a>
-                  </Link>
-                ))}
-              </div>
-            );
-          }
-          return (
-            <React.Fragment key={menuGroup.title}>
-              <SidebarMenuTitle>{menuGroup.title}</SidebarMenuTitle>
-              {menuGroup.items.map((item) => (
-                <Link href={`/dashboard/${item.title.toLowerCase()}`} key={item.title}>
-                  <a>
-                    <SidebarMenuItem className={active === item.title ? 'active' : ''}>
-                      {item.icon}
-                      {item.title}
-                    </SidebarMenuItem>
-                  </a>
-                </Link>
-              ))}
-            </React.Fragment>
-          );
-        })}
+        <SidebarMenuTitle>{dashboardMenu[0].title}</SidebarMenuTitle>
+        {dashboardMenu[0].items.map((item) => (
+          <Link href={`/dashboard/${item.title.toLowerCase()}`} key={item.title}>
+            <a>
+              <SidebarMenuItem className={active === item.title ? 'active' : ''}>
+                {item.icon}
+                {item.title}
+              </SidebarMenuItem>
+            </a>
+          </Link>
+        ))}
+
+        <SidebarMenuTitle className="account-menu">{dashboardMenu[1].title}</SidebarMenuTitle>
+        {dashboardMenu[1].items.map((item) => (
+          <Link href={`/dashboard/${item.title.toLowerCase()}`} key={item.title}>
+            <a>
+              <SidebarMenuItem className={active === item.title ? 'active' : ''}>
+                {item.icon}
+                {item.title}
+              </SidebarMenuItem>
+            </a>
+          </Link>
+        ))}
+
+        <div className="user-menu">
+          {dashboardMenu[2].items.map((item) => (
+            <Link href={`/dashboard/${item.title.toLowerCase()}`} key={item.title}>
+              <a>
+                <SidebarMenuItem className={active === item.title ? 'active' : ''}>
+                  {item.icon}
+                  {item.title}
+                </SidebarMenuItem>
+              </a>
+            </Link>
+          ))}
+        </div>
       </SidebarMenuContainer>
     </Sidebar>
   );

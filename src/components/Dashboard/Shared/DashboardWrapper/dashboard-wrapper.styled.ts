@@ -4,6 +4,11 @@ export const DashboardWrapperContainer = styled.div`
   > * {
     margin: 0;
   }
+
+  @media (min-width: 768px) {
+    display: flex;
+    height: 100%;
+  }
 `;
 
 export const MainSection = styled.div`

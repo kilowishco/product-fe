@@ -11,7 +11,7 @@ export const ModalContainer = styled.main`
   height: 100vh;
   padding: 2rem;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.8);
+  background: rgba(4, 4, 20, 0.9);
   cursor: pointer;
   z-index: 1005;
 
