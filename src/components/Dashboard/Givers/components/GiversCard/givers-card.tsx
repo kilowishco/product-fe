@@ -1,14 +1,14 @@
 import { FC } from 'react';
 import Image from 'next/image';
 
-import Card from '../Card';
+import Card from '../../../Shared/Card';
 import {
   GiversCardContainer,
   GiversImageContainer,
   GiversListContainer,
 } from './givers-card.styled';
 
-import { GiversProps } from '../../../../types';
+import { GiversProps } from '../../../../../types';
 
 interface GiversCardProps extends GiversProps {
   title: string;

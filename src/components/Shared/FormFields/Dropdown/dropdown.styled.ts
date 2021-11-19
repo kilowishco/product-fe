@@ -5,11 +5,13 @@ export const DropdownLabel = styled.label`
   line-height: 1.5rem;
   color: var(--color-light-grey);
   display: block;
+  font-weight: 500;
   margin: 0;
 `;
 
 export const DropdownWrapper = styled.div`
   font-size: 0.75rem;
+  font-weight: 500;
   line-height: 1rem;
   width: 100%;
   color: var(--color-input-black);

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const DateLabel = styled.label`
   font-size: 0.875rem;
   line-height: 1.5rem;
+  font-weight: 500;
   color: var(--color-light-grey);
   display: block;
   margin: 0;
@@ -12,6 +13,7 @@ export const DatePickerWrapper = styled.div`
   width: 100%;
   font-size: 0.75rem;
   line-height: 1rem;
+  font-weight: 500;
   color: var(--color-input-black);
   background: transparent;
   padding: 1rem 1.5rem;

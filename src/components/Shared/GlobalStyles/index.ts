@@ -24,6 +24,7 @@ const GlobalStyles = createGlobalStyle`
     --color-card-light: #8C8B97;
     --color-card-divider: #F8F8F9;
     --color-placeholder-grey: #DDE0E5;
+    --color-tab-grey: #E5E5E5;
 
     font-size: 16px;
 

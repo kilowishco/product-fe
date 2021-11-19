@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import ListItem, { ListItemPlaceholder } from '../../../../Shared/ListItem';
+import ListItem, { ListItemPlaceholder } from '../../../components/ListItem';
 import { ListCreatorContainer } from './list-creator.styled';
 
 import { ListItemProps } from '../../../../../../types';
@@ -23,7 +23,7 @@ const ListCreator: FC<ListCreatorProps> = ({ listItems }) => {
         </React.Fragment>
       ))}
 
-      <ListItemPlaceholder onClick={() => null} />
+      <ListItemPlaceholder />
     </ListCreatorContainer>
   );
 };

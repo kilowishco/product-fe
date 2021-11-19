@@ -35,8 +35,8 @@ const PasswordField: FC<PasswordFieldProps> = ({
           type="password"
           value={value}
           placeholder={placeholder}
-          onChange={(val) => setFieldValue(name, val)}
-          onBlur={(val) => setFieldValue(name, val)}
+          onChange={(e) => setFieldValue(name, e.target.value)}
+          onBlur={(e) => setFieldValue(name, e.target.value)}
           id={name}
           name={name}
         />

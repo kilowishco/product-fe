@@ -33,8 +33,8 @@ const Textarea: FC<TextareaProps> = ({
           className={error ? 'error' : ''}
           value={value}
           placeholder={placeholder}
-          onChange={(val) => setFieldValue(name, val)}
-          onBlur={(val) => setFieldValue(name, val)}
+          onChange={(e) => setFieldValue(name, e.target.value)}
+          onBlur={(e) => setFieldValue(name, e.target.value)}
           id={name}
           name={name}
         />

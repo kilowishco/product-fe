@@ -5,6 +5,7 @@ export const InputLabel = styled.label`
   line-height: 1.125rem;
   color: var(--color-input-black);
   display: block;
+  font-weight: 500;
   margin-bottom: 0.625rem;
 `;
 
@@ -14,6 +15,7 @@ export const InputWrapper = styled.div`
   input {
     font-size: 0.75rem;
     line-height: 1rem;
+    font-weight: 500;
     color: var(--color-input-black);
     background: transparent;
     padding: 1rem 1.5rem;

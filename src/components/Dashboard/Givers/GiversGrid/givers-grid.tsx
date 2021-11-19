@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import GiversCard from '../../Shared/GiversCard';
+import GiversCard from '../components/GiversCard';
 
 import { ListProps } from '../../../../types';
 import { GiversGridContainer, GiversGridHeader, GiversGridWrapper } from './givers-grid.styled';

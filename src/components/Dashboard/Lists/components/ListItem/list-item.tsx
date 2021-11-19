@@ -1,10 +1,10 @@
 import { FC } from 'react';
 import Image from 'next/image';
 
-import Card from '../Card';
+import Card from '../../../Shared/Card';
 import { ListItemContainer, ListContentContainer, ListImageContainer } from './list-item.styled';
 
-import { ListItemProps } from '../../../../types';
+import { ListItemProps } from '../../../../../types';
 
 const ListItem: FC<ListItemProps> = ({ type, title, description, image }) => {
   return (

@@ -1,15 +1,15 @@
 import { FC } from 'react';
-import Card from '../Card';
-import { ListItemPlaceholderContainer } from './list-item-placeholder.styled';
+import Card from '../../../Shared/Card';
+import { ListCardPlaceholderContainer } from './list-card-placeholder.styled';
 
-type ListItemPlaceholderProps = {
+type ListCardPlaceholderProps = {
   onClick: () => void;
 };
 
-const ListItemPlaceholder: FC<ListItemPlaceholderProps> = ({ onClick }) => {
+const ListCardPlaceholder: FC<ListCardPlaceholderProps> = ({ onClick }) => {
   return (
-    <Card full>
-      <ListItemPlaceholderContainer onClick={onClick}>
+    <Card>
+      <ListCardPlaceholderContainer onClick={onClick}>
         <svg
           width="44"
           height="44"
@@ -41,10 +41,10 @@ const ListItemPlaceholder: FC<ListItemPlaceholderProps> = ({ onClick }) => {
           />
         </svg>
 
-        <p>Add Item</p>
-      </ListItemPlaceholderContainer>
+        <p>Create first list</p>
+      </ListCardPlaceholderContainer>
     </Card>
   );
 };
 
-export default ListItemPlaceholder;
+export default ListCardPlaceholder;

@@ -29,8 +29,8 @@ const CheckboxField: FC<CheckboxFieldProps> = ({
           className={error ? 'error' : ''}
           type="checkbox"
           checked={value}
-          onChange={(val) => setFieldValue(name, val)}
-          onBlur={(val) => setFieldValue(name, val)}
+          onChange={() => setFieldValue(name, !value)}
+          onBlur={() => setFieldValue(name, !value)}
           id={name}
           name={name}
         />

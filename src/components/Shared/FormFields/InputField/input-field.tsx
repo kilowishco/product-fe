@@ -11,6 +11,7 @@ type InputFieldProps = {
   value: string | number;
   error: boolean;
   errorMessage?: string;
+  disabled?: boolean;
   full?: boolean;
 };
 
@@ -21,6 +22,7 @@ const InputField: FC<InputFieldProps> = ({
   type,
   value,
   error,
+  disabled,
   errorMessage,
   full,
 }) => {
@@ -36,9 +38,10 @@ const InputField: FC<InputFieldProps> = ({
           type={type}
           value={value}
           placeholder={placeholder}
-          onChange={(val) => setFieldValue(name, val)}
-          onBlur={(val) => setFieldValue(name, val)}
+          onChange={(e) => setFieldValue(name, e.target.value)}
+          onBlur={(e) => setFieldValue(name, e.target.value)}
           id={name}
+          disabled={disabled}
           name={name}
         />
       </InputWrapper>

@@ -1,16 +1,16 @@
 import { FC } from 'react';
 import Image from 'next/image';
 
-import Card from '../Card';
+import Card from '../../../Shared/Card';
 import {
   ListCardContainer,
   ListCardControls,
   ListImageContainer,
   SocialButtonsContainer,
 } from './list-card.styled';
-import BareButton from '../../../Shared/Button/BareButton';
+import BareButton from '../../../../Shared/Button/BareButton';
 
-import { ListProps } from '../../../../types';
+import { ListProps } from '../../../../../types';
 
 const ListCard: FC<ListProps> = ({ title, description, link, image }) => {
   return (

@@ -105,12 +105,18 @@ export const FormContainer = styled.form`
 `;
 
 export const InputContainer = styled.div`
-  + div {
+  + div,
+  &.mt-6 {
     margin-top: 1.5rem;
   }
 
+  &.mt-0 {
+    margin-top: 0;
+  }
+
   @media (min-width: 768px) {
-    + div {
+    + div,
+    &.mt-6 {
       margin-top: 1.25rem;
     }
   }
@@ -119,8 +125,16 @@ export const InputContainer = styled.div`
 export const CheckboxContainer = styled.div`
   padding-top: 1rem;
 
+  &.mt-6 {
+    margin-top: 1.5rem;
+  }
+
   @media (min-width: 768px) {
     padding-top: 0.5rem;
+
+    &.mt-6 {
+      margin-top: 1.25rem;
+    }
   }
 `;
 

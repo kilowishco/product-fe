@@ -22,6 +22,7 @@ export type ListItemProps = {
   description?: string;
   link?: string;
   image?: string;
-  bank_account_number?: number;
+  bank_account_number?: string;
   bank_name?: string;
+  profile_bank?: boolean;
 };

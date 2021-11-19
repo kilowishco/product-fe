@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import BareButton from '../../../Shared/Button/BareButton';
 import SpacedList from '../../../Shared/SpacedList';
-import ListCard, { ListCardPlaceholder } from '../../Shared/ListCard';
+import ListCard, { ListCardPlaceholder } from '../components/ListCard';
 
 import { ListProps } from '../../../../types';
 import { ListsGridContainer, ListsGridHeader, ListsGridWrapper } from './lists-grid.styled';
