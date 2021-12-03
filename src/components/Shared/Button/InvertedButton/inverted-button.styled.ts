@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import BaseButton from '../base';
 
-export const SecondaryButtonContainer = styled(BaseButton)`
-  color: var(--color-white);
-  background: var(--color-purple-secondary);
-  border: 1px solid var(--color-purple-secondary);
+export const InvertedButtonContainer = styled(BaseButton)`
+  color: var(--color-blue);
+  background: var(--color-light-blue);
+  border: 1px solid var(--color-light-blue);
   border-radius: 0.625rem;
   min-width: 10rem;
   text-align: center;

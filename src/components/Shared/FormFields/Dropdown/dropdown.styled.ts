@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 export const DropdownLabel = styled.label`
   font-size: 0.875rem;
-  line-height: 1.5rem;
-  color: var(--color-light-grey);
+  line-height: 1.125rem;
+  color: var(--color-input-black);
   display: block;
   font-weight: 500;
-  margin: 0;
+  margin-bottom: 0.625rem;
 `;
 
 export const DropdownWrapper = styled.div`

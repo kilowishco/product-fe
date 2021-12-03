@@ -15,7 +15,7 @@ export const MainSection = styled.div`
   flex-grow: 1;
   max-width: initial;
   background-color: var(--color-card-divider);
-  padding: 4rem 1.125rem;
+  padding: 3rem 1.25rem 4rem;
   min-height: 100vh;
 
   @media (min-width: 768px) {

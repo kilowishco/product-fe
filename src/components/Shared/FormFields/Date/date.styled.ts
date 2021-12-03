@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 export const DateLabel = styled.label`
   font-size: 0.875rem;
-  line-height: 1.5rem;
-  font-weight: 500;
-  color: var(--color-light-grey);
+  line-height: 1.125rem;
+  color: var(--color-input-black);
   display: block;
-  margin: 0;
+  font-weight: 500;
+  margin-bottom: 0.625rem;
 `;
 
 export const DatePickerWrapper = styled.div`

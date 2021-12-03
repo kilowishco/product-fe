@@ -54,6 +54,6 @@ export const SocialButtonsContainer = styled.div`
   border-top: 1px solid var(--color-card-divider);
 
   button + button {
-    margin-left: 0.25rem;
+    margin-left: 1.25rem;
   }
 `;

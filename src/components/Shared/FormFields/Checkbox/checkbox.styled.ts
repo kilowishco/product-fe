@@ -11,6 +11,7 @@ export const CheckboxWrapper = styled.div`
     color: var(--color-input-black);
     background: transparent;
     margin: 0;
+    margin-top: 0.125rem;
     outline: none;
 
     &::-ms-input-placeholder {

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ButtonContainer = styled.button`
-  font-weight: 400;
+  font-weight: 500;
   cursor: pointer;
   border-radius: 3px;
   letter-spacing: 0.1px;

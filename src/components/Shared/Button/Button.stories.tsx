@@ -6,6 +6,7 @@ import PrimaryButton from './PrimaryButton';
 import SecondaryButton from './SecondaryButton';
 import DefaultButton from './DefaultButton';
 import BareButton from './BareButton';
+import InvertedButton from './InvertedButton';
 
 export default {
   component: Button,
@@ -74,6 +75,18 @@ const BareButtonTemplate = (args) => <BareButton onClick={action('onClickAction'
 export const Bare = BareButtonTemplate.bind({});
 
 Bare.args = {
+  text: 'Sign up',
+  size: 'sm',
+  color: 'red',
+};
+
+const InvertedButtonTemplate = (args) => (
+  <InvertedButton onClick={action('onClickAction')} {...args} />
+);
+
+export const Inverted = InvertedButtonTemplate.bind({});
+
+Inverted.args = {
   text: 'Sign up',
   size: 'sm',
   color: 'red',
