@@ -1,5 +1,6 @@
-import { ListItemProps } from '../types';
+import { ListItemProps, ListProps } from '../types';
 import { defaultGivers } from './list-givers';
+import { defaultProfile } from './user-profile';
 
 export const defaultListItems: ListItemProps[] = [
   {
@@ -59,13 +60,17 @@ export const defaultListItems: ListItemProps[] = [
   },
 ];
 
-export const defaultLists = [
+export const defaultLists: ListProps[] = [
   {
+    owner: defaultProfile,
     title: 'List 1',
     description: 'This is a test description of a wishlist',
     link: '/',
+    date: new Date().toString(),
+    event_type: 'Birthday',
     image: '',
     listItems: defaultListItems,
+    published: false,
     givers: {
       checked: 20,
       secret_checked: 5,
@@ -73,11 +78,15 @@ export const defaultLists = [
     },
   },
   {
+    owner: defaultProfile,
     title: 'List 2',
     description: 'This is a test description of a wishlist',
     link: '/',
+    date: new Date().toString(),
+    event_type: 'Birthday',
     image: '',
     listItems: defaultListItems,
+    published: false,
     givers: {
       checked: 22,
       secret_checked: 2,
@@ -85,11 +94,15 @@ export const defaultLists = [
     },
   },
   {
+    owner: defaultProfile,
     title: 'List 3',
     description: 'This is a test description of a wishlist',
     link: '/',
+    date: new Date().toString(),
+    event_type: 'Birthday',
     image: '',
     listItems: defaultListItems,
+    published: true,
     givers: {
       checked: 12,
       secret_checked: 6,
@@ -97,11 +110,15 @@ export const defaultLists = [
     },
   },
   {
+    owner: defaultProfile,
     title: 'List 4',
     description: 'This is a test description of a wishlist',
     link: '/',
+    date: new Date().toString(),
+    event_type: 'Birthday',
     image: '',
     listItems: defaultListItems,
+    published: false,
     givers: {
       checked: 4,
       secret_checked: 1,
@@ -109,11 +126,15 @@ export const defaultLists = [
     },
   },
   {
+    owner: defaultProfile,
     title: 'List 5',
     description: 'This is a test description of a wishlist',
     link: '/',
+    date: new Date().toString(),
+    event_type: 'Birthday',
     image: '',
     listItems: defaultListItems,
+    published: true,
     givers: {
       checked: 2,
       secret_checked: 1,

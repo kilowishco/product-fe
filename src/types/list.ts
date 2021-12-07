@@ -1,3 +1,4 @@
+import { ProfileProps } from '.';
 import { GiversProps, ListItemGiverProps } from './givers';
 
 //==============================================================================
@@ -21,10 +22,14 @@ export type ListItemProps = {
 //==============================================================================
 
 export type ListProps = {
+  owner: ProfileProps;
   title: string;
   description: string;
   link: string;
+  date: string;
+  event_type?: string;
   image?: string;
   givers?: GiversProps;
+  published?: boolean;
   listItems?: ListItemProps[];
 };

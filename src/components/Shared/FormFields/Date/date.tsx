@@ -4,7 +4,6 @@ import { useFormikContext } from 'formik';
 import DatePicker from 'react-date-picker';
 
 import { DateLabel, DatePickerWrapper, DateFieldError } from './date.styled';
-import BareButton from '../../Button/BareButton';
 
 type DateFieldProps = {
   label: string;
