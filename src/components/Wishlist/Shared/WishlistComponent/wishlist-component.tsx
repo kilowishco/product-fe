@@ -32,7 +32,7 @@ const WishlistComponent: FC<WishlistComponentProps> = ({ list }) => {
               <h2>{list.title}</h2>
               <p>
                 A wishlist by <strong>{list.owner.name}</strong> for their special day on{' '}
-                {dayjs(list.date).format('D MMM YYYY')}
+                {dayjs(list.date).format('MMM D, YYYY')}
               </p>
             </div>
           </SpacedList>

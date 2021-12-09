@@ -34,6 +34,8 @@ export const WishlistItemContainer = styled.section`
 `;
 
 export const WishlistImageContainer = styled.div`
+  margin-right: 2rem;
+
   .placeholder {
     height: 3.75rem;
     width: 3.75rem;
@@ -43,5 +45,5 @@ export const WishlistImageContainer = styled.div`
 `;
 
 export const WishlistContentContainer = styled.div`
-  margin-left: 2rem;
+  display: block;
 `;

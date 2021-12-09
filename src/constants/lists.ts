@@ -27,7 +27,7 @@ export const defaultListItems: ListItemProps[] = [
   },
   {
     title: 'Item 3',
-    type: 'item',
+    type: 'cash',
     description: 'This is a test description of a wishlist item',
     link: '/',
     bank_account_number: '',
@@ -56,6 +56,17 @@ export const defaultListItems: ListItemProps[] = [
     bank_name: '',
     image: '',
     profile_bank: false,
+    list_item_givers: defaultGivers,
+  },
+  {
+    title: 'Item 6',
+    type: 'cash',
+    description: 'This is a test description of a wishlist item',
+    link: '/',
+    bank_account_number: '',
+    bank_name: '',
+    image: '',
+    profile_bank: true,
     list_item_givers: defaultGivers,
   },
 ];

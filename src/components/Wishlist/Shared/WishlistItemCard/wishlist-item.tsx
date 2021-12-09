@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import Image from 'next/image';
 
 import Card from '../../../Dashboard/Shared/Card';
@@ -11,12 +11,15 @@ import {
 import { ListItemProps } from '../../../../types';
 import SpacedList from '../../../Shared/SpacedList';
 import SecondaryButton from '../../../Shared/Button/SecondaryButton';
+import GiversModal from '../GiversModal';
 
 type WishlistItemProps = {
   listItem: ListItemProps;
 };
 
 const WishlistItem: FC<WishlistItemProps> = ({ listItem }) => {
+  const [openGiversModal, setOpenGiversModal] = useState(false);
+
   return (
     <Card full>
       <WishlistItemContainer>
@@ -46,10 +49,18 @@ const WishlistItem: FC<WishlistItemProps> = ({ listItem }) => {
             )}
           </SpacedList>
           <div>
-            <SecondaryButton text={`${listItem.type === 'item' ? 'Buy' : 'Transfer'}`} size="sm" />
+            <SecondaryButton
+              text={`${listItem.type === 'item' ? 'Buy' : 'Send Money'}`}
+              size="sm"
+              onClick={() => setOpenGiversModal(true)}
+            />
           </div>
         </SpacedList>
       </WishlistItemContainer>
+
+      {openGiversModal && (
+        <GiversModal listItem={listItem} closeModal={() => setOpenGiversModal(false)} />
+      )}
     </Card>
   );
 };
