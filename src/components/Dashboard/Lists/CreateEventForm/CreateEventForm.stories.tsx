@@ -8,7 +8,7 @@ export default {
 } as Meta;
 
 const CreateEventFormTemplate = (args) => (
-  <div style={{ backgroundColor: 'var(--color-card-divider)', padding: '4rem 6rem' }}>
+  <div style={{ backgroundColor: 'var(--color-card-divider)', padding: '2rem' }}>
     <CreateEventForm {...args} />
   </div>
 );

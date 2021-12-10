@@ -3,14 +3,14 @@ import React, { FC } from 'react';
 import ModalWrapper from '../../../Shared/Modal/modal';
 import { ShareListModalContainer } from './share-list-modal.styled';
 import ShareList from '../../../Shared/ShareList';
-import { ListItemProps } from '../../../../types';
+import { ListProps } from '../../../../types';
 
 type ShareListModalProps = {
   closeModal: () => void;
-  listItem?: ListItemProps;
+  list?: ListProps;
 };
 
-const ShareListModal: FC<ShareListModalProps> = ({ listItem, closeModal }) => {
+const ShareListModal: FC<ShareListModalProps> = ({ list, closeModal }) => {
   return (
     <ModalWrapper background="white" closeModal={closeModal} padding="4rem" maxWidth={600}>
       <ShareListModalContainer>
@@ -21,7 +21,7 @@ const ShareListModal: FC<ShareListModalProps> = ({ listItem, closeModal }) => {
           ultrices aliquam. Et ultrices semper auctor eget convallis.
         </p>
 
-        <ShareList listItem={listItem} />
+        <ShareList list={list} />
       </ShareListModalContainer>
     </ModalWrapper>
   );

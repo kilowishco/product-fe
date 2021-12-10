@@ -145,7 +145,12 @@ const CreateEventForm: FC = () => {
               <p>Only two steps left, you got this.</p>
               <SecondaryButton
                 className="create-event-button"
-                text={!IsCreatingEvent ? 'Next' : <Loader light />}
+                text={
+                  <>
+                    {IsCreatingEvent && <Loader light />}
+                    Next
+                  </>
+                }
                 size="lg"
                 type="submit"
               />

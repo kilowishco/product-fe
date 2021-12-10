@@ -9,14 +9,16 @@ import { MakeListContainer, MakeListHeader, MakeListFooter } from './make-list.s
 import { FormError } from '../../../Shared/Form/form.styled';
 import BareButton from '../../../Shared/Button/BareButton';
 
-import { ListItemProps } from '../../../../types';
+import { ListProps } from '../../../../types';
+import ListPreview from './components/ListPreview';
 
 type MakeListProps = {
-  listItems?: Array<ListItemProps>;
+  list?: ListProps;
 };
 
-const MakeList: FC<MakeListProps> = ({ listItems }) => {
+const MakeList: FC<MakeListProps> = ({ list, list: { listItems } }) => {
   const [isSavingList, setIsSavingList] = useState(false);
+  const [openListPreview, setOpenListPreview] = useState(false);
   const makeListErrorMessage = {
     errorMessages: [],
     errorFields: [],
@@ -46,10 +48,20 @@ const MakeList: FC<MakeListProps> = ({ listItems }) => {
 
           {isMakingList && (
             <SpacedList compact>
-              <BareButton color="var(--color-purple)" text="Preview List" size="sm" />
+              <BareButton
+                color="var(--color-purple)"
+                text="Preview List"
+                size="sm"
+                onClick={() => setOpenListPreview(true)}
+              />
               <SecondaryButton
                 className="create-event-button"
-                text={!isSavingList ? 'Publish List' : <Loader light />}
+                text={
+                  <>
+                    {isSavingList && <Loader light />}
+                    Publish List
+                  </>
+                }
                 size="sm"
                 onClick={() => setIsSavingList(true)}
               />
@@ -57,6 +69,9 @@ const MakeList: FC<MakeListProps> = ({ listItems }) => {
           )}
         </SpacedList>
       </MakeListFooter>
+      {openListPreview && (
+        <ListPreview list={list} returnToList={() => setOpenListPreview(false)} />
+      )}
     </MakeListContainer>
   );
 };

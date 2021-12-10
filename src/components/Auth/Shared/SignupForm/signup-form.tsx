@@ -177,7 +177,12 @@ const SignupForm: FC = () => {
 
           <SecondaryButton
             className="signup-button"
-            text={!IsCreatingAccount ? 'Create Account' : <Loader light />}
+            text={
+              <>
+                {IsCreatingAccount && <Loader light />}
+                Create Account
+              </>
+            }
             size="lg"
             type="submit"
           />

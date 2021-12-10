@@ -1,15 +1,31 @@
-import { FC } from 'react';
-import { ListItemProps } from '../../../types';
+import { FC, useState } from 'react';
+import { ListProps } from '../../../types';
 import BareButton from '../Button/BareButton';
 import SecondaryButton from '../Button/SecondaryButton';
 import { ShareListContainer, CopyLinkContainer, SocialShareContainer } from './share-list.styled';
 
 type ShareListProps = {
-  listItem: ListItemProps;
+  list: ListProps;
 };
 
-const ShareList: FC<ShareListProps> = ({ listItem }) => {
-  const copyLink = () => null;
+const ShareList: FC<ShareListProps> = ({ list }) => {
+  const [copied, setCopied] = useState(false);
+
+  const copyLink = () => {
+    const selBox = document.createElement('textarea');
+    selBox.style.position = 'fixed';
+    selBox.style.left = '0';
+    selBox.style.top = '0';
+    selBox.style.opacity = '0';
+    selBox.value = list.link;
+    document.body.appendChild(selBox);
+    selBox.focus();
+    selBox.select();
+    document.execCommand('copy');
+    document.body.removeChild(selBox);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2500);
+  };
 
   const CopyLink = () => {
     return (
@@ -18,12 +34,16 @@ const ShareList: FC<ShareListProps> = ({ listItem }) => {
         <CopyLinkContainer>
           <input
             aria-label="Wishlist external link"
-            value={listItem.link}
+            value={list.link}
             type="text"
             placeholder="Enter email address"
             readOnly
           />
-          <SecondaryButton size="sm" text="Copy Link" onClick={copyLink} />
+          <SecondaryButton
+            size="sm"
+            text={`${copied ? 'Link Copied!!' : 'Copy Link'}`}
+            onClick={!copied && copyLink}
+          />
         </CopyLinkContainer>
       </>
     );
@@ -38,7 +58,9 @@ const ShareList: FC<ShareListProps> = ({ listItem }) => {
             <li>
               <BareButton
                 text={
-                  <>
+                  <a
+                    href={`http://www.facebook.com/sharer.php?u=${list.link}`}
+                    rel="noopener noreferrer">
                     <span className="sr-only">Share on Facebook</span>
                     <svg
                       aria-hidden
@@ -52,14 +74,16 @@ const ShareList: FC<ShareListProps> = ({ listItem }) => {
                         fill="#7575FE"
                       />
                     </svg>
-                  </>
+                  </a>
                 }
               />
             </li>
             <li>
               <BareButton
                 text={
-                  <>
+                  <a
+                    href={`https://twitter.com/intent/tweet?text=${list.title}%20-&url=${list.link}&via=kilowish`}
+                    rel="noopener noreferrer">
                     <span className="sr-only">Share on Twitter</span>
                     <svg
                       aria-hidden
@@ -73,14 +97,16 @@ const ShareList: FC<ShareListProps> = ({ listItem }) => {
                         fill="#7575FE"
                       />
                     </svg>
-                  </>
+                  </a>
                 }
               />
             </li>
             <li>
               <BareButton
                 text={
-                  <>
+                  <a
+                    href={`https://api.whatsapp.com/send?text=Hello, checkout out my wishlist at ${list.link}`}
+                    rel="noopener noreferrer">
                     <span className="sr-only">Share on Whatsapp</span>
                     <svg
                       aria-hidden
@@ -94,14 +120,16 @@ const ShareList: FC<ShareListProps> = ({ listItem }) => {
                         fill="#7575FE"
                       />
                     </svg>
-                  </>
+                  </a>
                 }
               />
             </li>
             <li>
               <BareButton
                 text={
-                  <>
+                  <a
+                    href={`https://www.linkedin.com/shareArticle?mini=true&url=${list.link}&title=${list.title}`}
+                    rel="noopener noreferrer">
                     <span className="sr-only">Share on LinkedIn</span>
                     <svg
                       aria-hidden
@@ -115,7 +143,7 @@ const ShareList: FC<ShareListProps> = ({ listItem }) => {
                         fill="#7575FE"
                       />
                     </svg>
-                  </>
+                  </a>
                 }
               />
             </li>

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { ListPreviewContainer } from './components/ListPreview/list-preview.styled';
 
 export const MakeListContainer = styled.form`
   width: 100%;
@@ -16,6 +17,10 @@ export const MakeListContainer = styled.form`
     color: var(--color-dark);
     margin-bottom: 0;
     text-align: center;
+  }
+
+  ${ListPreviewContainer} {
+    position: fixed;
   }
 
   @media (min-width: 768px) {
@@ -70,8 +75,8 @@ export const MakeListFooter = styled.div`
 
   p {
     font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.125rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
     letter-spacing: -0.02rem;
     color: var(--color-mid-grey);
   }
@@ -79,6 +84,11 @@ export const MakeListFooter = styled.div`
   @media (min-width: 768px) {
     > div {
       margin-top: 4rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.125rem;
     }
   }
 `;

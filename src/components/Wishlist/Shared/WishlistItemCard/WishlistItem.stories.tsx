@@ -5,7 +5,7 @@ import WishlistItem from './wishlist-item';
 
 export default {
   component: WishlistItem,
-  title: 'Components/WishlistItem',
+  title: 'Components/Wishlist Item',
   argTypes: {
     listItems: {
       description: 'Sample List items of wishlists',

@@ -194,7 +194,12 @@ const ProfileForm: FC<ProfileFormProps> = ({ profile }) => {
           <ProfileFooter>
             <SecondaryButton
               className="profile-item-button"
-              text={!isUpdatingProfile ? 'Save Settings' : <Loader light />}
+              text={
+                <>
+                  {isUpdatingProfile && <Loader light />}
+                  Save Settings
+                </>
+              }
               size="lg"
               type="submit"
             />

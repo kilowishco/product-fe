@@ -20,7 +20,7 @@ const WishlistComponent: FC<WishlistComponentProps> = ({ list }) => {
     <WishlistComponentContainer>
       <WishlistHeaderContainer>
         <SpacedList>
-          <SpacedList>
+          <SpacedList className="separate-sm">
             <Image
               src={list.image || SampleImage}
               alt="Wishlist image"

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { LoaderContainer } from '../Loader/loader.styled';
 
 export const ButtonContainer = styled.button`
   font-weight: 500;
@@ -34,6 +35,14 @@ export const ButtonContainer = styled.button`
     font-size: 0.875rem;
     line-height: 1.125rem;
     padding: 0 1.5rem;
+  }
+
+  ${LoaderContainer} {
+    transform: translateX(-0.5rem);
+
+    svg {
+      max-width: 1rem;
+    }
   }
 
   @media (min-width: 768px) {

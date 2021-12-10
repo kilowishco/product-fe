@@ -6,7 +6,7 @@ import WishlistWrapper from './wishlist-wrapper';
 
 export default {
   component: WishlistWrapper,
-  title: 'Components/WishlistWrapper',
+  title: 'Components/Wishlist Wrapper',
   argTypes: {
     list: {
       description: 'Sample List of wishlists',

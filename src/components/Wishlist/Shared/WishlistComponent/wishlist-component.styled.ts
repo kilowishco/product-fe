@@ -24,7 +24,7 @@ export const WishlistComponentContainer = styled.div`
 `;
 
 export const WishlistHeaderContainer = styled.div`
-  margin-bottom: 2.875rem;
+  margin-bottom: 1rem;
 
   .wishlist__header {
     margin-left: 1.25rem;
@@ -50,11 +50,27 @@ export const WishlistHeaderContainer = styled.div`
     margin-bottom: 0;
   }
 
+  svg {
+    width: 60px;
+  }
+
   img {
     border-radius: 10px;
   }
 
+  .separate-sm {
+    flex-direction: column;
+    align-items: flex-start;
+
+    > * + * {
+      margin-top: 1rem;
+      margin-left: 0;
+    }
+  }
+
   @media (min-width: 768px) {
+    margin-bottom: 2.875rem;
+
     h2 {
       line-height: 3.5rem;
       font-size: 2.25rem;
@@ -62,6 +78,20 @@ export const WishlistHeaderContainer = styled.div`
 
     > p {
       font-size: 0.95rem;
+    }
+
+    .separate-sm {
+      flex-direction: row;
+      align-items: center;
+
+      > * + * {
+        margin-top: 0;
+        margin-left: 1.25rem;
+      }
+    }
+
+    svg {
+      width: 8rem;
     }
   }
 `;

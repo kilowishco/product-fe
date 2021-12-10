@@ -15,7 +15,7 @@ export default {
 } as Meta;
 
 const GiversGridTemplate = (args) => (
-  <div style={{ backgroundColor: 'var(--color-card-divider)', padding: '4rem 6rem' }}>
+  <div style={{ backgroundColor: 'var(--color-card-divider)', padding: '2rem' }}>
     <GiversGrid {...args} />
   </div>
 );

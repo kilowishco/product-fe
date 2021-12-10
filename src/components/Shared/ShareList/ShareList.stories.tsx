@@ -1,5 +1,5 @@
 import { Meta } from '@storybook/react';
-import { defaultListItems } from '../../../constants/lists';
+import { defaultLists } from '../../../constants/lists';
 
 import ShareList from './share-list';
 
@@ -7,8 +7,8 @@ export default {
   component: ShareList,
   title: 'Components/Share List',
   argTypes: {
-    listItem: {
-      description: 'Sample wishlist item',
+    list: {
+      description: 'Sample wishlist',
       control: 'object',
     },
   },
@@ -19,5 +19,5 @@ const ShareListTemplate = (args) => <ShareList {...args} />;
 export const Base = ShareListTemplate.bind({});
 
 Base.args = {
-  listItem: defaultListItems[0],
+  list: defaultLists[0],
 };

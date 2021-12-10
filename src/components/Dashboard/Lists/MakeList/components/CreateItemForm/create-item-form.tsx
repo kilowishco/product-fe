@@ -199,7 +199,12 @@ const CreateItemForm: FC<CreateItemFormProps> = ({ listItem, setListItem, type }
           <CreateItemFooter>
             <SecondaryButton
               className="create-item-button"
-              text={!IsCreatingItem ? 'Proceed' : <Loader light />}
+              text={
+                <>
+                  {IsCreatingItem && <Loader light />}
+                  Proceed
+                </>
+              }
               size="sm"
               type="submit"
             />

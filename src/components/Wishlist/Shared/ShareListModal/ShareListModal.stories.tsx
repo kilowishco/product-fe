@@ -2,14 +2,14 @@ import { Meta } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
 import ShareListModal from './share-list-modal';
-import { defaultListItems } from '../../../../constants/lists';
+import { defaultLists } from '../../../../constants/lists';
 
 export default {
   component: ShareListModal,
   title: 'Components/Share List Modal',
   argTypes: {
     listItem: {
-      description: 'Sample wishlist item',
+      description: 'Sample wishlist',
       control: 'object',
     },
   },
@@ -24,5 +24,5 @@ const ShareListModalTemplate = (args) => (
 export const Base = ShareListModalTemplate.bind({});
 
 Base.args = {
-  listItem: defaultListItems[0],
+  list: defaultLists[0],
 };
